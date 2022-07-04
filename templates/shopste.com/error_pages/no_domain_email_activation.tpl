@@ -1,0 +1,1 @@
+<h1>Eine Emailbestätigung Ihrer Registrierung ist erforderlich, bitte &uuml;berpr&uuml;fen Sie Ihre Emails und klicken den Freischaltlink in der Email an.</h1>

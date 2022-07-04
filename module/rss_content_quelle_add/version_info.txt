@@ -1,0 +1,16 @@
+---------------------------------------
+>> MyDraft Plugin/Modul: rss_content_quelle_add
+---------------------------------------
+Veröffentlichungsdatum: 23.05.2019
+Versionsnummer: 0.2 
+CMS-Bezeichner bei Modulauswahl: 
+CORE: Ja
+Author: Jan Bludau
+Firma: Bludau Media
+Webseite: https://bludau-media.de
+
+--------------
+>> Changelog:
+--------------
+22.05.2019:
+- Init of Changelog 

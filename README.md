@@ -1,2 +1,2 @@
-# myDraft-CMS-Blog-Shop
-Public Version of the CMS
+# myDraft-CMS
+Own CMS, Blog, Shop PHP System

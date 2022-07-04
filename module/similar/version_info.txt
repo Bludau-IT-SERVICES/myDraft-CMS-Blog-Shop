@@ -1,0 +1,23 @@
+---------------------------------------
+>> MyDraft Plugin/Modul: similar
+---------------------------------------
+Veröffentlichungsdatum: 02.02.2020
+Versionsnummer: 0.2 
+CMS-Bezeichner bei Modulauswahl: 
+CORE: Ja
+Author: Jan Bludau
+Firma: Bludau Media
+Webseite: https://bludau-media.de
+
+--------------
+>> Changelog:
+--------------
+01.01.2020: 
+- init of changelog
+- Umstellung auf Bootstrap
+
+02.02.2020:
+- Titel Wording Umstellung
+
+17.11.2020
+- Kartenansicht erstellen

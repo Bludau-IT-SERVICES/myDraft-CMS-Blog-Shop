@@ -1,0 +1,38 @@
+---------------------------------------
+>> MyDraft Plugin/Modul: rss_content_quelle_add
+---------------------------------------
+Veröffentlichungsdatum: 23.05.2019
+Versionsnummer: 0.2 
+CMS-Bezeichner bei Modulauswahl: 
+CORE: Ja
+Author: Jan Bludau
+Firma: Bludau Media
+Webseite: https://bludau-media.de
+
+--------------
+>> Changelog:
+--------------
+22.05.2019:
+- Init of Changelog 
+
+01.01.2020
+- Umstellung auf Bootstrap 3
+
+26.03.2020
+- Whatsapp Teilen Button
+
+31.03.2020
+- https://api.whatsapp.com/send? nicht mehr Whatsapp://
+- Telegram Share
+
+26.01.2021
++ Links zu Buttons gemacht
+
+08.02.2021
++ Kartenansicht Design mehr Klickrate
+
+16.03.2021
++ Weiterleitung url weiterleitung.php + Matomo-Tracking
+
+17.04.2021
++ Youtube Support
