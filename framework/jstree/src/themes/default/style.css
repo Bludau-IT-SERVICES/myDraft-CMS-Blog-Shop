@@ -105,6 +105,13 @@
   -ms-user-select: none;
   user-select: none;
 }
+.jstree-contextmenu .jstree-anchor {
+  -webkit-user-select: none;
+  /* disable selection/Copy of UIWebView */
+  -webkit-touch-callout: none;
+  /* disable the IOS popup when long-press on a link */
+  user-select: none;
+}
 .vakata-context {
   display: none;
 }
@@ -156,6 +163,9 @@
 .vakata-context li > a:focus {
   outline: 0;
 }
+.vakata-context .vakata-context-no-icons {
+  margin-left: 0;
+}
 .vakata-context .vakata-context-hover > a {
   position: relative;
   background-color: #e8eff7;
@@ -182,6 +192,9 @@
   background-color: transparent;
   border: 0;
   box-shadow: 0 0 0;
+}
+.vakata-context .vakata-contextmenu-disabled > a > i {
+  filter: grayscale(100%);
 }
 .vakata-context li > a > i {
   text-decoration: none;
@@ -548,9 +561,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.jstree-default .jstree-ellipsis.jstree-no-icons .jstree-anchor {
-  width: calc(100% - 5px);
-}
 .jstree-default.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==");
 }
@@ -731,9 +741,6 @@
   width: calc(100% - 23px);
   text-overflow: ellipsis;
   overflow: hidden;
-}
-.jstree-default-small .jstree-ellipsis.jstree-no-icons .jstree-anchor {
-  width: calc(100% - 5px);
 }
 .jstree-default-small.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAACAQMAAABv1h6PAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMHBgAAiABBI4gz9AAAAABJRU5ErkJggg==");
@@ -916,9 +923,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.jstree-default-large .jstree-ellipsis.jstree-no-icons .jstree-anchor {
-  width: calc(100% - 5px);
-}
 .jstree-default-large.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAACAQMAAAAD0EyKAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjgIIGBgABCgCBvVLXcAAAAABJRU5ErkJggg==");
 }
@@ -1006,13 +1010,13 @@
     background: transparent;
   }
   .jstree-default-responsive .jstree-open > .jstree-ocl {
-    background-position: 0 0px !important;
+    background-position: 0 0 !important;
   }
   .jstree-default-responsive .jstree-closed > .jstree-ocl {
     background-position: 0 -40px !important;
   }
   .jstree-default-responsive.jstree-rtl .jstree-closed > .jstree-ocl {
-    background-position: -40px 0px !important;
+    background-position: -40px 0 !important;
   }
   .jstree-default-responsive .jstree-themeicon {
     background-position: -40px -40px;
