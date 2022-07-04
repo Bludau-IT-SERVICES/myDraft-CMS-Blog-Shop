@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 #
-# jQuery File Upload Plugin GAE Python Example 3.1.0
+# jQuery File Upload Plugin GAE Python Example
 # https://github.com/blueimp/jQuery-File-Upload
 #
 # Copyright 2011, Sebastian Tschan
 # https://blueimp.net
 #
 # Licensed under the MIT license:
-# http://www.opensource.org/licenses/MIT
+# https://opensource.org/licenses/MIT
 #
 
 from google.appengine.api import memcache, images
