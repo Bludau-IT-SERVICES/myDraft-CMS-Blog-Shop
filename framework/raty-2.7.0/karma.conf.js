@@ -3,22 +3,19 @@ module.exports = function(config) {
 
   config.set({
     autoWatch: true,
-    browsers:  ['Firefox'],
+    browsers:  ['Chrome', 'Firefox'],
 
     files: [
-      'vendor/*.js',
+      'node_modules/jquery/dist/jquery.min.js',
       'lib/*.css',
       'lib/*.js',
-      'spec/lib/jasmine-jquery.js',
+      'spec/vendor/jasmine-jquery.js',
       'spec/lib/helper.js',
-      'spec/options_spec.js',
-      'spec/*spec.js'
+      'spec/**/*[sS]pec.js'
     ],
 
     frameworks: ['jasmine'],
-    logLevel:   config.LOG_ERROR,
-    port:       9876,
-    reporters:  ['dots'],
+    logLevel:   config.LOG_DISABLE,
     singleRun:  true
   });
 };

@@ -1,11 +1,9 @@
-# jQuery Raty - A Star Rating Plugin
+# Raty - A Star Rating Plugin
 
-[![Build Status](https://travis-ci.org/wbotelhos/raty.svg)](https://travis-ci.org/wbotelhos/raty)
+[![CI](https://github.com/wbotelhos/raty/workflows/CI/badge.svg)](https://github.com/wbotelhos/raty/actions)
 [![NPM Version](https://badge.fury.io/js/raty-js.svg)](https://badge.fury.io/js/raty-js)
-[![Dependency](https://david-dm.org/wbotelhos/raty.svg)](https://david-dm.org/wbotelhos/raty)
-[![Dev Dependency](https://david-dm.org/wbotelhos/raty/dev-status.svg)](https://david-dm.org/wbotelhos/raty#info=devDependencies)
-[![Code Climate](https://codeclimate.com/github/wbotelhos/raty.png)](https://codeclimate.com/github/wbotelhos/raty)
-[![Patreon](https://img.shields.io/badge/donate-%3C3-brightgreen.svg)](https://www.patreon.com/wbotelhos)
+[![Maintainability](https://codeclimate.com/github/wbotelhos/raty.png)](https://codeclimate.com/github/wbotelhos/raty)
+[![Sponsor](https://img.shields.io/badge/sponsor-%3C3-green)](https://www.patreon.com/wbotelhos)
 
 ## Rails Rating?
 
@@ -46,61 +44,51 @@ $('div').raty({ starType: 'i' });
 
 ## Options
 
-```js
-cancel:      false                                          // Creates a cancel button to cancel the rating.
-cancelClass: 'raty-cancel'                                  // Name of cancel's class.
-cancelHint:  'Cancel this rating!'                          // The cancel's button hint.
-cancelOff:   'cancel-off.png'                               // Icon used on active cancel.
-cancelOn:    'cancel-on.png'                                // Icon used inactive cancel.
-cancelPlace: 'left'                                         // Cancel's button position.
-click:       undefined                                      // Callback executed on rating click.
-half:        false                                          // Enables half star selection.
-halfShow:    true                                           // Enables half star display.
-hints:       ['bad', 'poor', 'regular', 'good', 'gorgeous'] // Hints used on each star.
-iconRange:   undefined                                      // Object list with position and icon on and off to do a mixed icons.
-mouseout:    undefined                                      // Callback executed on mouseout.
-mouseover:   undefined                                      // Callback executed on mouseover.
-noRatedMsg:  'Not rated yet!'                               // Hint for no rated elements when it's readOnly.
-number:      5                                              // Number of stars that will be presented.
-numberMax:   20                                             // Max of star the option number can creates.
-path:        undefined                                      // A global locate where the icon will be looked.
-precision:   false                                          // Enables the selection of a precision score.
-readOnly:    false                                          // Turns the rating read-only.
-round:       { down: .25, full: .6, up: .76 }               // Included values attributes to do the score round math.
-score:       undefined                                      // Initial rating.
-scoreName:   'score'                                        // Name of the hidden field that holds the score value.
-single:      false                                          // Enables just a single star selection.
-space:       true                                           // Puts space between the icons.
-starHalf:    'star-half.png'                                // The name of the half star image.
-starOff:     'star-off.png'                                 // Name of the star image off.
-starOn:      'star-on.png'                                  // Name of the star image on.
-target:      undefined                                      // Element selector where the score will be displayed.
-targetForma: '{score}'                                      // Template to interpolate the score in.
-targetKeep:  false                                          // If the last rating value will be keeped after mouseout.
-targetScore: undefined                                      // Element selector where the score will be filled, instead of creating a new hidden field (scoreName option).
-targetText:  ''                                             // Default text setted on target.
-targetType:  'hint'                                         // Option to choose if target will receive hint o 'score' type.
-starType:    'img'                                          // Element used to represent a star.
-```
+| Property       | Default                                        |Description                                                      |
+|----------------|------------------------------------------------|-----------------------------------------------------------------|
+|`cancel`        |`false`                                         |Creates a cancel button to cancel the rating.                    |
+|`cancelClass`   |`'raty-cancel'`                                 |Name of cancel's class.                                          |
+|`cancelHint`    |`'Cancel this rating!'`                         |The cancel's button hint.                                        |
+|`cancelOff`     |`'cancel-off.png'`                              |Icon used on active cancel.                                      |
+|`cancelOn`      |`'cancel-on.png'`                               |Icon used inactive cancel.                                       |
+|`cancelPlace`   |`'left'`                                        |Cancel's button position.                                        |
+|`click`         |`undefined`                                     |Callback executed on rating click.                               |
+|`half`          |`false`                                         |Enables half star selection.                                     |
+|`halfShow`      |`true`                                          |Enables half star display.                                       |
+|`hints`         |`['bad', 'poor', 'regular', 'good', 'gorgeous']`|Hints used on each star.                                         |
+|`iconRange`     |`undefined`                                     |Object list with position and icon on and off to do a mixed icons|
+|`iconRangeSame` |`false`                                         |All icons prior to selection will be the same as the selection.  |
+|`mouseout`      |`undefined`                                     |Callback executed on mouseout.                                   |
+|`mouseover`     |`undefined`                                     |Callback executed on mouseover.                                  |
+|`noRatedMsg`    |`'Not rated yet!'`                              |Hint for non rated elements when it's readOnly.                  |
+|`number`        |`5`                                             |The number of stars that will be presented.                      |
+|`numberMax`     |`20`                                            |Max number of stars star the option number will create.          |
+|`path`          |`undefined`                                     |A global path where the icon will be found.                      |
+|`precision`     |`false`                                         |Enables the selection of a precise score.                        |
+|`readOnly`      |`false`                                         |Turns the rating read-only.                                      |
+|`round`         |`{ down: .25, full: .6, up: .76 }`              |Includes value attributes to do the score rounding math.         |
+|`score`         |`undefined`                                     |Initial rating.                                                  |
+|`scoreName`     |`'score'`                                       |Name of the hidden field that holds the score value.             |
+|`single`        |`false`                                         |Enables single star selection.                                   |
+|`space`         |`true`                                          |Puts space between the icons.                                    |
+|`starHalf`      |`'star-half.png'`                               |The name of the half star image.                                 |
+|`starOff`       |`'star-off.png'`                                |Name of the star image off.                                      |
+|`starOn`        |`'star-on.png'`                                 |Name of the star image on.                                       |
+|`target`        |`undefined`                                     |Element selector where the score will be displayed.              |
+|`targetFormat`  |`'{score}'`                                     |Template to interpolate the score in.                            |
+|`targetKeep`    |`false`                                         |If the last rating value will be kept on mouseout.               |
+|`targetScore`   |`undefined`                                     |Score field target avoiding hidden field creation                |
+|`targetText`    |`''`                                            |Default text in a target.                                        |
+|`targetType`    |`'hint'`                                        |Choose if target will receive a hint or the score number         |
+|`starType`      |`'img'`                                         |Element used to represent a star.                                |
 
 ## Functions
 
-```js
-$('div').raty('score');                  // Get the current score.
-
-$('div').raty('score', number);          // Set the score.
-
-$('div').raty('click', number);          // Click on some star.
-
-$('div').raty('readOnly', boolean);      // Change the read-only state.
-
-$('div').raty('cancel', boolean);        // Cancel the rating. The last param force the click callback.
-
-$('div').raty('reload');                 // Reload the rating with the current configuration.
-
-$('div').raty('set', { option: value }); // Reset the rating with new configurations.
-
-$('div').raty('destroy');                // Destroy the bind and give you the raw element.
-
-$('div').raty('move', number);           // Move the mouse to the given score point position.
-```
+| Function                                | Description                                               |
+|-----------------------------------------|-----------------------------------------------------------|
+|`$('div').data('raty).score();`          |Get the current score.                                     |
+|`$('div').data('raty).score(number);`    |Set a score.                                               |
+|`$('div').data('raty).click(number);`    |Click on a star.                                           |
+|`$('div').data('raty).readOnly(boolean);`|Change the read-only state.                                |
+|`$('div').data('raty).cancel(boolean);`  |Cancel the rating. The last param force the click callback.|
+|`$('div').data('raty).move(number);`     |Move the mouse to the given score point position.          |

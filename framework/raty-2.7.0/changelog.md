@@ -1,8 +1,41 @@
-# jQuery Raty - A Star Rating Plugin - http://wbotelhos.com/raty
+## 3.1.1
+
+### Bugfix
+
+- Fix invalid Bower JSON; [#232](https://github.com/wbotelhos/raty/pull/232) by [Nimmer](https://github.com/Nimmer)
+
+## 3.1.0
+
+### News
+
+- Adds `iconRangeSame` option where the previous stars will be the same as the selected one; [#135](https://github.com/wbotelhos/raty/issues/135) by [viniciusjl](https://github.com/viniciusjl)
+
+### Update
+
+- Adds CSS, Images and Fonts to Bower; [#161](https://github.com/wbotelhos/raty/pull/161) by [juriejan](https://github.com/juriejan)
+
+## 3.0.0
+
+### Break Change
+
+- Function `destroy` was removed;
+- Function `reload` was removed;
+- Function `set` was removed;
+- Functions now is accessed via `element.data('raty').FUNCTION_NAME()`;
+- Option `cancel` was renamed to `cancelButton`;
+
+### Bugfix
+
+- When using `single` options the click was not turning the star on; [#155](https://github.com/wbotelhos/raty/pull/155) by [henrikhannemose](https://github.com/henrikhannemose)
+
+### Update
+
+- Grammars fixes; [#217](https://github.com/wbotelhos/raty/pull/217) by [tfantina](https://github.com/tfantina)
+- All the code were migrated to pure Prototype. Vanilla JS coming soon!;
 
 ## 2.9.0
 
-### Changes
+### Update
 
 + Drops `engines` from `package.json` for a greater flexibility;
 
@@ -14,7 +47,7 @@
 
 ## 2.7.1
 
-### Fixes
+### Bugfix
 
 + Fix `readOnly` when using fonts; (Amaia Baigorri)
 
@@ -25,14 +58,14 @@
 
 ## 2.7.0
 
-### Fixes
+### Bugfix
 
 + Function `move` was losing precision with float with more then one digit;
 + Function `move` was losing the saved `options` data;
 + With `half` enable, mousemove was not changing to full star after 0.5 point;
 + With `half` enable, score field was receiving precision value. (reported by hoangnham01)
 
-### Changes
+### Update
 
 + If you returns `false` into `click` callback, the action will be prevented;
 + When `precision` is on it won't force `targetType` to be `score` anymore.
@@ -43,14 +76,14 @@
 
 ## 2.6.0
 
-### Fixes
+### Bugfix
 
 + Target was not showing the score when `half` was enabled; (andersonba)
 + Fixed some JS Lint warnings; (Qazzian)
 + Cancel button `mouseleave` must yiels no score as `undefined` not `null`;
 + The `numberMax` now sets the stars between 1...`numberMax` instead 0...`numberMax`.
 
-### Changes
+### Update
 
 + `path` now is `undefined` by default;
 + The {score} placeholder on `targetFormat` option is no longer mandatory;
@@ -69,7 +102,7 @@
 
 ## 2.5.2
 
-### Fixes
+### Bugfix
 
 The read-only indicator was not removing after the reset of configuration, blocking the `click` and `score` functions.
 
@@ -83,7 +116,7 @@ The read-only indicator was not removing after the reset of configuration, block
 + The `readOnly` and `scoreName` option can be setted via callback; (aprimadi)
 + You can avoid the width style setting the option `width` to false.
 
-### Changes
+### Update
 
 + Extracted the limit of stars to the option `numberMax`;
 + The `hints` options can receives three values:
@@ -97,7 +130,7 @@ The read-only indicator was not removing after the reset of configuration, block
 + When `precision` is enabled, `half` becomes enabled and `targetType` is changed to 'score';
 + When `readOnly` is true, the cursor style will be removed instead to use the default.
 
-### Fixes
+### Bugfix
 
 + The `click` function was not yielding the event.
 + The `path` always was prepend avoiding absolute or different path for each icon;
