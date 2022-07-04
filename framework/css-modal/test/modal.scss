@@ -7,7 +7,22 @@
 
 // Include Modal
 @import "../modal";
+@import "../plugins/modal-gallery";
+@import "../plugins/modal-maxwidth";
+@import "../plugins/modal-resize";
+@import "../plugins/modal-spinner";
+@import "../plugins/modal-stretch";
 
+body {
+	margin: 0;
+}
+
+.content {
+	margin: 0 auto;
+	padding: 0 1em;
+	max-width: 30em;
+	font-size: 1.25em;
+}
 
 // Apply the modal with all its possible parts
 ._modal {
@@ -26,18 +41,15 @@
 	@extend %modal--transition-plainScreen;
 }
 
-.modal--zoomout {
-	@extend %modal--transition-zoomOut;
+[data-cssmodal-resize] {
+	@extend %modal--resize;
 }
 
-.modal--slidefromtop {
-	@extend %modal--transition-slideFromTop;
+[data-cssmodal-maxwidth] {
+	@extend %modal--resize;
 }
 
-.modal--bouncefromtop {
-	@extend %modal--transition-bounceFromTop;
+.spinner {
+	@extend %spinner;
 }
 
-.modal--bouncefromtopshaky {
-	@extend %modal--transition-bounceFromTopShaky;
-}

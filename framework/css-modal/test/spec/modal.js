@@ -1,7 +1,17 @@
-/*global describe, it, expect, afterEach */
+/*global describe, it, xit, expect, afterEach, waitsFor */
 (function ($, CSSModal) {
 
 	'use strict';
+
+
+	// Helper for async tests, see https://gist.github.com/yyx990803/a6154353ae17dde81444
+	function async (run) {
+		return function () {
+			var done = false;
+			waitsFor(function () { return done; });
+			run(function () { done = true; });
+		};
+	}
 
 	// Testing if the modal works in general
 	describe('Modal', function () {
@@ -34,21 +44,23 @@
 			expect($modal.css('opacity')).toBe('1');
 		});
 
-		it('has class is-active when hash is set', function () {
+		it('has class is-active when hash is set', async(function (done) {
 			window.location.hash = '#modal';
 
 			setTimeout(function () {
 				expect($modal.hasClass('is-active')).toBe(true);
+				done();
 			}, 0);
-		});
+		}));
 
-		it('has not class is-active when hash is #!', function () {
+		it('has not class is-active when hash is #!', async(function (done) {
 			window.location.hash = '#!';
 
 			setTimeout(function () {
 				expect($modal.hasClass('is-active')).not.toBe(true);
+				done();
 			}, 0);
-		});
+		}));
 
 		// aria-hidden values tests
 		describe('aria-hidden', function () {
@@ -138,6 +150,10 @@
 		// Testing the event displatcher (triggerer)
 		describe('dispatch event', function () {
 
+			beforeEach(function () {
+				$ = jQuery;
+			});
+
 			// Is it available and working?
 			it('creates event', function () {
 				var eventCalled;
@@ -154,12 +170,29 @@
 			});
 
 			// Is the data set as expected
-			it('has event data', function () {
+			it('has event data (jQuery)', function () {
 				var eventData;
 
-				$(document).on('newEvent', function (e) {
-					eventData = e.originalEvent.detail;
+				$(document).on('newEvent', function (e, data) {
+					eventData = data.detail;
 				});
+
+				CSSModal.trigger('newEvent', { 'id': 1 });
+
+				setTimeout(function () {
+					expect(typeof eventData.modal).toBe('object');
+					expect(eventData.modal.id).toBe(1);
+				}, 0);
+			});
+
+			it('has event data (none jQuery)', function () {
+				var eventData;
+
+				$(document).on('newEvent', function (e, data) {
+					eventData = data.detail;
+				});
+
+				$ = false;
 
 				CSSModal.trigger('newEvent', { 'id': 1 });
 
@@ -213,7 +246,8 @@
 				}, 0);
 			});
 
-			it('shows unstacked modal after close', function () {
+			// FIXME: Issue unrelated to iframes
+			xit('shows unstacked modal after close', function () {
 				window.location.hash = '#modal';
 				window.location.hash = '#stackable';
 
@@ -223,6 +257,13 @@
 					expect($modal.hasClass('is-stacked')).not.toBe(true);
 					expect($modal.hasClass('is-active')).toBe(true);
 				}, 0);
+			});
+
+			it('does not stack when defined', function () {
+				window.location.hash = '#modal';
+				window.location.hash = '#non-stackable';
+
+				expect($modal.hasClass('is-stacked')).not.toBe(true);
 			});
 
 

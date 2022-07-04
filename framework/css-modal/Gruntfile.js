@@ -15,7 +15,8 @@ module.exports = function (grunt) {
 			all: [
 				'Gruntfile.js',
 				'modal.js',
-				'test/spec/modal.js'
+				'test/spec/*.js',
+				'plugins/**/*.js'
 			],
 			options: {
 				jshintrc: '.jshintrc'
@@ -27,7 +28,10 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					unixNewlines: true,
-					style: 'expanded'
+					style: 'expanded',
+					loadPath: '.',
+					update: true,
+					sourcemap: 'none'
 				},
 				files: {
 					'test/modal.css': 'test/modal.scss'
@@ -37,10 +41,17 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					unixNewlines: true,
-					style: 'expanded'
+					loadPath: '.',
+					update: true,
+					sourcemap: 'none'
 				},
 				files: {
-					'build/modal.css': 'modal.scss'
+					'build/modal.css': 'modal.scss',
+					'build/modal-gallery.css': 'plugins/modal-gallery.scss',
+					'build/modal-maxwidth.css': 'plugins/modal-maxwidth.scss',
+					'build/modal-resize.css': 'plugins/modal-resize.scss',
+					'build/modal-stretch.css': 'plugins/modal-stretch.scss',
+					'build/modal-spinner.css': 'plugins/modal-spinner.scss'
 				}
 			}
 		},
@@ -70,14 +81,15 @@ module.exports = function (grunt) {
 		// Watch that stuff
 		watch: {
 			scss: {
-				files: ['*.scss', 'test/*.scss'],
+				files: ['*.scss', 'test/*.scss', 'plugins/*.scss'],
 				tasks: 'sass'
 			},
 
 			hint: {
 				files: [
 					'modal.js',
-					'test/spec/modal.js'
+					'test/spec/*.js',
+					'plugins/**/*.js',
 				],
 				tasks: 'jshint'
 			},
@@ -108,7 +120,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 
 	// Default task
-	grunt.registerTask('default', ['sass', 'jshint', 'jasmine']);
+	grunt.registerTask('default', ['sass:dev', 'jshint', 'jasmine']);
 
 	// Building a new version
 	grunt.registerTask('dist', ['jasmine', 'sass:dist', 'copy:dist']);

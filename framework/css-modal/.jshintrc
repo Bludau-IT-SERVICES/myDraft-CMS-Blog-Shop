@@ -1,25 +1,26 @@
 {
-	"node": true,
-	"browser": true,
-	"esnext": true,
 	"bitwise": true,
+	"browser": true,
 	"camelcase": true,
 	"curly": true,
 	"eqeqeq": true,
 	"immed": true,
+	"jquery": true,
 	"latedef": true,
 	"newcap": true,
 	"noarg": true,
+	"node": true,
 	"regexp": true,
-	"undef": true,
-	"unused": true,
+	"smarttabs": true,
 	"strict": true,
 	"trailing": true,
-	"smarttabs": true,
+	"undef": true,
+	"unused": true,
 
 	"globals": {
-		"jQuery": true,
 		"define": true,
-		"module": true
+		"module": true,
+		"beforeEach": true,
+		"afterEach": true
 	}
 }
