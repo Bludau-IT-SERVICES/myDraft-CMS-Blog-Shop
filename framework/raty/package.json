@@ -1,0 +1,57 @@
+{
+  "author": "Washington Botelho",
+  "bugs": {
+    "url": "https://github.com/wbotelhos/raty/issues"
+  },
+  "contributors": [
+    "Washington Botelho <wbotelhos@gmail.com> (https://www.wbotelhos.com)"
+  ],
+  "demos": [
+    "demo/index.html"
+  ],
+  "dependencies": {
+    "jquery": "^3.6"
+  },
+  "description": "Raty - A Star Rating Plugin",
+  "devDependencies": {
+    "eslint": "^7.32",
+    "jasmine-core": "^3.9",
+    "karma": "^6.3",
+    "karma-chrome-launcher": "^3.1",
+    "karma-firefox-launcher": "^2.1",
+    "karma-jasmine": "^4.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "spec"
+  },
+  "homepage": "https://github.com/wbotelhos/raty",
+  "keywords": [
+    "classificacao",
+    "classificar",
+    "javascript",
+    "jquery",
+    "library",
+    "plugin",
+    "rating",
+    "raty",
+    "star",
+    "staring",
+    "votar",
+    "voto"
+  ],
+  "license": "MIT",
+  "main": "lib/jquery.raty.js",
+  "maintainers": [
+    "Washington Botelho <wbotelhos@gmail.com> (https://www.wbotelhos.com)"
+  ],
+  "name": "raty-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wbotelhos/raty"
+  },
+  "scripts": {
+    "test": "node_modules/karma/bin/karma start karma.conf.js"
+  },
+  "version": "3.1.1"
+}

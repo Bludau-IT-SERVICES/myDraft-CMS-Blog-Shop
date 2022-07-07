@@ -1,0 +1,21 @@
+{
+  "name": "Freie Welt Nachrichten",
+  "short_name": "Freie Welt Nachrichten",
+  "lang": "de-DE",
+  "start_url": "/?pk_campaign=PWA&pk_kwd=startup",
+  "display": "standalone",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "icons": [
+    {
+      "src": "/templates/freie-welt.eu/media/favicon-96x96.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/templates/freie-welt.eu/media/favicon-96x96.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

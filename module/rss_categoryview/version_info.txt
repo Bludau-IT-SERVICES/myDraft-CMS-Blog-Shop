@@ -1,0 +1,61 @@
+---------------------------------------
+>> MyDraft Plugin/Modul: sitemap
+---------------------------------------
+Veröffentlichungsdatum: 23.05.2019
+Versionsnummer: 0.2 
+CMS-Bezeichner bei Modulauswahl: 
+CORE: Ja
+Author: Jan Bludau
+Firma: Bludau Media
+Webseite: https://bludau-media.de
+
+--------------
+>> Changelog:
+--------------
+22.05.2019:
+- Init of Changelog 
+- HTML 5 <article>
+- TITLE von h1 auf h2
+- LINK von h3 auf h4
+
+29.08.2019
+--------------
+- PHP 7.3 Kompatibel
+- rss_category function in basic_functions.php (NEU!)
+- mysql_insert_id() auf mysqli_insert_id($link)
+
+03.11.2019
+------------------
+- Bootstrap
+- Bootstrap 3 Spaltige RSS-News auf dem Desktop
+
+02.02.2020
+- Reddit adden
+
+04.03.2020 
+- REDDIT, TWITTER, FACEBOOK Folgen Links untereinander
+
+19.07.2020
+- Einleitung in den Footer
+
+26.01.2021
+- Kartenansicht bei RSS Kategorien + CSS Hell und Dark vom ob_start
+
+08.02.2021
+- Final Kartendesign im Dark-Mode.
+
+18.02.2021
+- 2 Kacheln bei kleinerer Auflösung
+
+13.03.2021
+- Suche beta
+
+16.03.2021
++ Weiterleitung url weiterleitung.php + Matomo-Tracking
+
+29.03 - 30.03
++ Footer entfernt
++ Suchen 1.0.0 + Themenvorschläge
+
+16.04.2021
++ Neues Fenster bei Kategorie external Links

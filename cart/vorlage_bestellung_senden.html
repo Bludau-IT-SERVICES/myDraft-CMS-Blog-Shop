@@ -1,0 +1,33 @@
+<h1>Ihre Online Bestellung</h1>
+	<table>
+	<tr><td>Firma</td><td>###FIRMA###</td></tr>	
+	<tr><td>Name</td><td>###VORNAME### ###NACHNAME###</td></tr>	
+	<tr><td>Stra&szlig;e</td><td>###STRASSE###</td></tr>	
+	<tr><td>PLZ + Ort</td><td>###PLZ### ###STADT###</td></tr>	
+	<tr><td>Land</td><td>###LAND###</td></tr>	
+	</table>	
+	<h2>Bestell&uuml;bersicht</h2>
+	<table width="100%"><tr><td>Name</td><td>Menge</td><td>Preis</td></tr>
+	
+	// Alle Artikel durchlaufen
+	for($i=0; $i < count($strAry) -1; $i++) {
+		$shop_artikel_anzahl++;
+		
+		// Artikel Details holen 
+		$strItemDetailAry = explode("-",$strAry[$i]);
+		$query ="SELECT *,shop_item.name_de as shop_name FROM shop_item JOIN menue ON shop_item.menue_id = menue.id WHERE shop_item.shop_item_id ='".$strItemDetailAry[0]."'";
+		$resItem = DBi::$conn->query($query) or die(mysqli_error());
+		$Cartdata = mysqli_fetch_assoc($resItem);
+		
+		$shop_artikel_preis = str_replace(".",",",$strItemDetailAry[2]);
+		$shop_artikel_preisGes += $shop_artikel_preis * $strItemDetailAry[1];
+		
+		// Seite wo Artikel liegt abrufen
+		$pathItem = getPathUrl($_SESSION['language'],$Cartdata['menue_id']);
+		
+		<tr><td><a href="'.$pathItem.'">'.$Cartdata['shop_name'].'</a></td>
+		<td>'.$strItemDetailAry[1].'</td>
+		<td>'.$strItemDetailAry[1] * $shop_artikel_preis.' EUR</td>
+		<tr>
+	}
+	<tr><td colspan="2" style="text-align:right">Gesamtpreis</td><td>'.$shop_artikel_preisGes.' EUR</td><td>&nbsp;</td></tr></table><br/><br/>Mit freundlichen Gr&uuml;&szlig;en Ihr Shop Team

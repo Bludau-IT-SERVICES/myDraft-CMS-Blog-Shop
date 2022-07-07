@@ -1,0 +1,26 @@
+---------------------------------------
+>> MyDraft Plugin/Modul: news_latest
+---------------------------------------
+Veröffentlichungsdatum: 14.04.2019
+Versionsnummer: 0.2 
+CMS-Bezeichner bei Modulauswahl: "Neuste Nachrichten"
+Author: Jan Bludau
+Firma: Bludau Media
+Webseite: https://bludau-media.de
+
+--------------
+>> Changelog:
+--------------
+15.05.2019: 
+- Source-Clean-up
+- HTML5 article
+14.04.2019: 
+- init of changelog
+- DB-Schema Erweiterung:
+
+ALTER TABLE `modul_news_latest`
+    ADD COLUMN `news_category_id` INT UNSIGNED NULL DEFAULT NULL AFTER `created_at`;
+ALTER TABLE `modul_news_latest`
+    ADD COLUMN `news_category_show_items_count` INT(10) UNSIGNED NULL DEFAULT '1' AFTER `news_category_id`; 
+	
+- Ermöglicht das steuern (Backend, von News-Kategorie, Anzahl Beiträge) 

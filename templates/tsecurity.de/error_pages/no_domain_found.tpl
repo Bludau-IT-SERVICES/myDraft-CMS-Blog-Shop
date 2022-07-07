@@ -1,0 +1,1 @@
+<h1>Keine registrierte Domain gefunden.</h1> 

@@ -1,0 +1,17 @@
+---------------------------------------
+>> MyDraft Plugin/Modul: sitemap
+---------------------------------------
+Veröffentlichungsdatum: 19.04.2019
+Versionsnummer: 0.2 
+CMS-Bezeichner bei Modulauswahl: 
+CORE: Ja
+Author: Jan Bludau
+Firma: Bludau Media
+Webseite: https://bludau-media.de
+
+--------------
+>> Changelog:
+--------------
+19.04.2019: 
+- init of changelog
+- PHP-CORE-Konstanzen Nutzung für Modul-Settings (System-Modul, vorinstalliert) vereinfacht die Einbindung von mehreren Webseitenarten und ist besser Customizable.
