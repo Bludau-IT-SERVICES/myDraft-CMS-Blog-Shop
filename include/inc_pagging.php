@@ -162,6 +162,7 @@ function getPageBrowse($setDataAnzahl,$pageing_modul_typ,$bAjaxClick=false) {
    $iStartCounter = $iAnzahl ;
  }
 
+
 # URL erzeugen 
 if(strpos($_SERVER['REQUEST_URI'],'/module/') ===  false) {
  
@@ -191,13 +192,13 @@ if(strpos($_SERVER['REQUEST_URI'],'/module/') ===  false) {
 	}
 	
 	
-	if(!isset($_GET['suchtext'])) {
+	if(!isset($_SESSION['suchtext'])) {
 		$_GET['suchtext'] = '';
 	}
 	
 	#echo $_GET['suchtext'].'VV';
-	if($_GET['suchtext'] != 'Bitte Suchbegriff eintragen...' && $_GET['suchtext'] != '') {
-		$strPathExtend = 'Suche/'.urlencode($_GET['suchtext']).'/';
+	if($_SESSION['suchtext'] != '') {
+		$strPathExtend = 'Suche/'.urlencode($_SESSION['suchtext']).'/';
 	} else {
 		$strPathExtend = '';
 	}
@@ -227,12 +228,12 @@ if(strpos($_SERVER['REQUEST_URI'],'/module/') ===  false) {
 		$path = getPathUrl($_SESSION['language'],$_SESSION['page_id']);						
 	}
 	
-	if(!isset($_GET['suchtext'])) {
+	if(!isset($_SESSION['suchtext'])) {
 		$_GET['suchtext'] = '';
 	}
 	
-	if($_GET['suchtext'] != 'Bitte Suchbegriff eintragen...' && $_GET['suchtext'] != '') {
-		$strPathExtend = 'Suche/'.urlencode($_GET['suchtext']).'/';
+	if($_SESSION['suchtext'] != '') {
+		$strPathExtend = 'Suche/'.urlencode($_SESSION['suchtext']).'/';
 	} else {
 		$strPathExtend = '';
 	}
@@ -240,13 +241,16 @@ if(strpos($_SERVER['REQUEST_URI'],'/module/') ===  false) {
 
 }
 
+// Suche vorhanden
+if($_SESSION['suchtext'] != '') {
+	$strPathExtend = 'Suche/'.urlencode($_SESSION['suchtext']).'/';
+} else {
+	$strPathExtend = '';
+}
+$strPath = '/'.$path.$strPathExtend.'Seite/';
+
  for($i = $iStartCounter; $i <= ($iAnzahl + $iSizeUp); $i++) {
 	
-	#if ($i==1){
-
-	#   $iCount_next_tmp += $iSizePerPage;
-	#   continue;	   
-	#}
 	
 	# Nicht über der Artikelgröße 
 

@@ -54,7 +54,9 @@
 			
 				<div class="main {$layout_style}">
 				
-					<div  id= "main_page_container" class="main-border">				
+					<div  id= "main_page_container" class="main-border">
+
+						{include file="google_translationbar.tpl" caching cache_lifetime=-1}				
 						{include file="small_news.tpl" caching cache_lifetime=-1}
 						<br/>
 						{$layout_content = getPageLayoutHTML_tpl({$aryPage.layout},{$aryPage.spalte_links_breite},{$aryPage.spalte_rechts_breite},{$aryPage.spalte_mitte_breite})}

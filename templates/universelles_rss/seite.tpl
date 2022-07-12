@@ -55,7 +55,9 @@
 
 				<div class="main {$layout_style}">
 				
-					<div  id= "main_page_container" class="main-border">				
+					<div  id= "main_page_container" class="main-border">
+
+						{include file="google_translationbar.tpl" caching cache_lifetime=-1}			
 						{include file="small_news.tpl" caching cache_lifetime=-1}
 						<br/>
 						{include file="werbung_header.tpl"} 

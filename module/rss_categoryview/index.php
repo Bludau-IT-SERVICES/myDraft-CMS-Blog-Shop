@@ -269,13 +269,18 @@ function LoadModul_rss_categoryview($config) {
  } 
 
 if ($_GET['bAjaxLoad'] == "true") {
- 	include_once('../../include/inc_config-data.php');
+ 	
+	include_once('../../include/inc_config-data.php');
 	include_once('../../include/inc_basic-functions.php');
 	include_once('../../include/inc_pagging.php');
+	
 	$_POST = mysql_real_escape_array($_POST);
-	$_GET  = mysql_real_escape_array($_GET);	
-	$_SESSION  = mysql_real_escape_array($_SESSION);	
+	$_GET = mysql_real_escape_array($_GET);
+	$_SESSION = mysql_real_escape_array($_SESSION);
+	$_COOKIE = mysql_real_escape_array($_COOKIE);
+
 	$path = realpath($_SERVER['DOCUMENT_ROOT']);  
+
 	require_once ($path."/framework/piwik/MatomoTracker.php"); 
 	if(isset($_GET['suchtext'])) {
 		$t = new MatomoTracker( $idSite = 1,'https://freie-welt.eu/framework/piwik/');

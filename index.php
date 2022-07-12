@@ -550,22 +550,24 @@ if(!$mydraft->tpl->isCached($template_file,$strSeitenCacheID,$bNoCache)) {
 	$mydraft->tpl->assign('page_title', strip_tags(getPageTitle($aryPage)));
  
 	# META ANGABEN GENERIEREN
+	#print_r($PageMeta);
 	if(isset($PageMeta['title']['meta_title'])) {
 		$mydraft->tpl->assign('meta_titel', strip_tags($PageMeta['title']['meta_title'])); 
-	} else {		
-		if(isset($PageMeta['title']['title_de'])) {
-			$mydraft->tpl->assign('meta_titel', strip_tags($PageMeta['title']['title_de'])); 
+	} else {	
+
+		if(!empty($PageMeta['title']['title_de'])) {
+			$mydraft->tpl->assign('meta_titel', strip_tags($PageMeta['title']['title_de'])); 	
 		} else {
 			$mydraft->tpl->assign('meta_titel','');
 		}
 	}
-	
+
 	if(isset($PageMeta['title']['meta_description'])) {
 		$mydraft->tpl->assign('meta_description', strip_tags($PageMeta['title']['meta_description'])); 
 	} else {
-		if(isset($PageMeta['description']['AddText'])) {
-			$mydraft->tpl->assign('meta_description', str_replace('"',"&quot;",strip_tags($PageMeta['description']['AddText'])));
-		}	else {
+		if(!empty($PageMeta['description']['AddText'])) {
+			$mydraft->tpl->assign('meta_description', str_replace('"',"&quot;",strip_tags($PageMeta['description']['AddText']))); 			
+		} else {
 			$mydraft->tpl->assign('meta_description','');
 		}
 	}
