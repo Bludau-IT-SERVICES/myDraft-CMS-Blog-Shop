@@ -59,3 +59,7 @@ Webseite: https://bludau-media.de
 
 16.04.2021
 + Neues Fenster bei Kategorie external Links
+
+14.07.2022
++ URL Encoding teilen Funktion
++ Keine Überschrift mehr, sondern inline im Block des Moduls

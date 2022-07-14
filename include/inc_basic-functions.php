@@ -29,7 +29,7 @@ function search_lastest($limit_results) {
 	$resSearch = DBi::$conn->query($query) or die(mysqli_error(DBi::$conn));	
 	$bIn = false;
 	while ($row = mysqli_fetch_assoc($resSearch)) {
-		$strSearch .= '<a style="margin-right:10px" title="Nachrichten Thema Suche: '.$row['suchanfrage'].'" href="'.$strpfad.'/Suche/'.$row['suchanfrage'].'/Seite/1/">➛ '.$row['suchanfrage'].' <span style="font-size:10px">('.$row['suchanzahl'].')</span></a> ';
+		$strSearch .= '<a style="margin-right:10px" title="Nachrichten Thema Suche: '.$row['suchanfrage'].'" href="'.$strpfad.'/Suche/'.$row['suchanfrage'].'/Seite/1/">★ '.$row['suchanfrage'].' <span style="font-size:10px">('.$row['suchanzahl'].')</span></a> ';
 		$bIn = true;
 	}
 /*

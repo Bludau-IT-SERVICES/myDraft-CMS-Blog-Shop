@@ -10,7 +10,8 @@ if(file_exists($_SERVER['DOCUMENT_ROOT'].'/include/inc_pagging.php')) {
 # >> RSS Kategorie anzeigen 
 ####################################
 function setUpdateRSSList($config,$tblRSS_kategorie_data,$titel) {
-		
+	
+
 	if(isset($_SESSION['suchtext'])) {
 		$strWords = explode(" ",$_SESSION['suchtext']);
 		for($i=0; $i < count($strWords); $i++) {
@@ -172,9 +173,9 @@ function setUpdateRSSList($config,$tblRSS_kategorie_data,$titel) {
 			#}
 			$tblRSS_data['name_de'] = str_replace("&quot;",'"',$tblRSS_data['name_de']);
 
-			$text .= '<h1><a class="rss_head_link" title="'.$tblRSS_data['AddTitel'].'" href="'.$Artikel_path.'">➛ '.$tblRSS_data['AddTitel'].'</a></h1><p>';
+			$text .= '<h1><a class="rss_head_link" title="'.$tblRSS_data['AddTitel'].'" href="'.$Artikel_path.'">➔ '.$tblRSS_data['AddTitel'].'</a></h1>';
 
-			$text .= '<h2><time datetime="'.$tblRSS_data['AddDatum'].'">❅ '.getDateDE($tblRSS_data['AddDatum']).'</time>  <i style="font-size:10px">('.$aryPage['visitors'].')</i></h2>';
+			$text .= '<h4><time datetime="'.$tblRSS_data['AddDatum'].'">❅ '.getDateDE($tblRSS_data['AddDatum']).'</time>  <i style="font-size:10px">('.$aryPage['visitors'].')</i></h4>';
 			if($tblRSS_kategorie_data['gui_header_show_category'] == 'Y') {
 				if($tblRSS_kategorie_data['gui_header_show_category_link'] == 'Y') {
 					
@@ -184,10 +185,11 @@ function setUpdateRSSList($config,$tblRSS_kategorie_data,$titel) {
 				}
 			}
 		
-		$text .= ' <a class="rss_head_link_hell" title="Nachrichtenwebseite direkt öffnen" target="_blank" href="'.CORE_SHOP_URL.'/weiterleitung.php?rss_id='.$tblRSS_data["news_content_id"].'&page_id='.$tblRSS_data['rss_page_id'].'"> <strong>&#10070; '.str_replace("www.","",$pathinfo['host']).'</strong></a>
+		$text .= ' <a class="rss_head_link_hell" title="Nachrichtenwebseite direkt öffnen" target="_blank" href="'.CORE_SHOP_URL.'/weiterleitung.php?rss_id='.$tblRSS_data["news_content_id"].'&page_id='.$tblRSS_data['rss_page_id'].'"> <strong>➔ '.str_replace("www.","",$pathinfo['host']).'</strong></a>
 		<strong> <a title="Startseite der RSS-Quelle öffnen" target="_blank" href="'.$pathinfo['scheme'].'://'.$pathinfo['host'].'"> <i class="fas fa-link"></i></a></strong>';	
  
-			$text .= '</p></header>';
+			$text .= '</h2>
+			</header>';
  
 			$text .= '<div class="content rss_category" id="modul_rss_categoryview_'.$tblRSS_data['news_content_id'].'">';
 
@@ -269,18 +271,13 @@ function LoadModul_rss_categoryview($config) {
  } 
 
 if ($_GET['bAjaxLoad'] == "true") {
- 	
-	include_once('../../include/inc_config-data.php');
+ 	include_once('../../include/inc_config-data.php');
 	include_once('../../include/inc_basic-functions.php');
 	include_once('../../include/inc_pagging.php');
-	
 	$_POST = mysql_real_escape_array($_POST);
-	$_GET = mysql_real_escape_array($_GET);
-	$_SESSION = mysql_real_escape_array($_SESSION);
-	$_COOKIE = mysql_real_escape_array($_COOKIE);
-
+	$_GET  = mysql_real_escape_array($_GET);	
+	$_SESSION  = mysql_real_escape_array($_SESSION);	
 	$path = realpath($_SERVER['DOCUMENT_ROOT']);  
-
 	require_once ($path."/framework/piwik/MatomoTracker.php"); 
 	if(isset($_GET['suchtext'])) {
 		$t = new MatomoTracker( $idSite = 1,'https://freie-welt.eu/framework/piwik/');
