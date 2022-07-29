@@ -159,7 +159,16 @@ date_default_timezone_set("Europe/Berlin");
 //session_set_cookie_params(360000);
 
 $path = dirname(__FILE__);
+
+// Installer aufrufen, wenn keine Config Datei geschrieben wurde
+if(!file_exists($path."/installed.php")) {
+    include_once($path."/../install/install.php");
+    exit(0);
+} 
+
 include_once($path."/../libs/mysqli.php");
+
+
 include_once("installed.php");
 DBi::$conn = new mysqli(HOST, USER, PASS, DB);
 

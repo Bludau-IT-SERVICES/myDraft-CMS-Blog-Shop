@@ -2,7 +2,7 @@
 session_start();
 header("Content-Type: text/html; charset=UTF-8");
 
-function encrypt_decrypt($action, $string) {
+/*function encrypt_decrypt($action, $string) {
     $output = false;
     $encrypt_method = "AES-256-CBC";
     $secret_key = SECRECT_KEY;
@@ -20,7 +20,7 @@ function encrypt_decrypt($action, $string) {
     }
     return $output;
 }
-
+*/
 function output_value($input) {
     if(isset($input)) {
         return $input;
@@ -66,6 +66,10 @@ if(is_array($_GET)) {
 
 if(is_array($_SESSION)) {
     $_SESSION  = mysql_real_escape_array($_SESSION);
+}
+
+if(is_array($_COOKIE)) {
+    $_SESSION  = mysql_real_escape_array($_COOKIE);
 }
 
 ?>
