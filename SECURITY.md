@@ -1,0 +1,1 @@
+# Security notices relating to myDraft CMS | Blog | Shop System for PHP
