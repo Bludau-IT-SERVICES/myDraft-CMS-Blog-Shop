@@ -1,6 +1,6 @@
 {
-  "name": "Freie Welt Nachrichten",
-  "short_name": "Freie Welt Nachrichten",
+  "name": "myDraft Example CMS | Blog | Shopsystem",
+  "short_name": "myDraft Example CMS | Blog | Shopsystem",
   "lang": "de-DE",
   "start_url": "/?pk_campaign=PWA&pk_kwd=startup",
   "display": "standalone",
