@@ -5,9 +5,9 @@
 ###############################
 
 # CUSTOMIZE INSTALL PATH
-define("CORE_SERVER_PATH",     "/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/");
+#define("CORE_SERVER_PATH",     "/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/");
 define("CORE_PIWIK_ACTIVE",     "YES");
-define("CORE_SHOP_URL",     "https://cms-mydraft.bludau.io/");
+#define("CORE_SHOP_URL",     "https://cms-mydraft.bludau.io/");
 
 ### RSS MODULE CONFIG
 define("CORE_SERVER_RSS_ADDING_LINK",     "/de/1137/Ueber-FW/RSS-Feed-eintragen/#rss_adding");
@@ -26,32 +26,32 @@ define("CORE_DEFAULT_ITEMS_PER_PAGE_COMPUTER",     "99");
 define("CORE_RSS_CONTENT_HTTP_PATH",     "feed");
 define("CORE_RSS_NEWS_HTTP_PATH",     "/mydraft-nachrichten/");
 
-define("CORE_SERVER_DOMAIN",     "https://cms-mydraft.bludau.io/");
-define("CORE_API_DOMAIN",     "cms-mydraft.bludau.io");
+#define("CORE_SERVER_DOMAIN",     "https://cms-mydraft.bludau.io/");
+#define("CORE_API_DOMAIN",     "cms-mydraft.bludau.io");
 define("CORE_SERVER_PLATTFORM_NAME",     "myDraft Plattform");
-define("CORE_MAIL_SEND_BCC",     "kontakt@bludau.io");
+define("CORE_MAIL_SEND_BCC",     "info@mydomain.com");
 define("CORE_MAIL_SEND_BCC_NAME",     "myDraft Support");
-define("CORE_MAIL_FROM_EMAIL",     "kontakt@bludau.io");
+define("CORE_MAIL_FROM_EMAIL",     "info@mydomain.com");
 define("CORE_MAIL_FROM_EMAIL_NAME",     "myDraft Support");
 
 # API KOMPONENTE NEWS 
-define("CORE_MAIL_FROM_API",     "kontakt@bludau.io");
+define("CORE_MAIL_FROM_API",     "info@mydomain.com");
 define("CORE_MAIL_FROM_API_NAME",     "myDraft API Support");
-define("CORE_MAIL_SEND_API_BCC",     "kontakt@bludau.io");
+define("CORE_MAIL_SEND_API_BCC",     "info@mydomain.com");
 define("CORE_MAIL_SEND_API_BCC_NAME",     "myDraft API Support");
-define("CORE_MAIL_FROM_API_REGISTER",     "kontakt@bludau.io");
+define("CORE_MAIL_FROM_API_REGISTER",     "info@mydomain.com");
 define("CORE_MAIL_FROM_API_REGISTER_NAME",     "myDraft Anmeldebestätigung");
 
 # KOMPONENTE RSS-FEEDs
-define("CORE_MAIL_FROM_RSS",     "kontakt@bludau.io");
+define("CORE_MAIL_FROM_RSS",     "info@mydomain.com");
 define("CORE_MAIL_FROM_RSS_NAME",     "myDraft RSS Support");
-define("CORE_MAIL_FROM_RSS_BCC",     "kontakt@bludau.io");
+define("CORE_MAIL_FROM_RSS_BCC",     "info@mydomain.com");
 define("CORE_MAIL_FROM_RSS_BCC_NAME",     "myDraft RSS Support");
 
 # KOMPONENTE NEWS
-define("CORE_MAIL_FROM_NEWS",     "kontakt@bludau.io");
+define("CORE_MAIL_FROM_NEWS",     "info@mydomain.com");
 define("CORE_MAIL_FROM_NEWS_NAME",     "myDraft News Support");
-define("CORE_MAIL_FROM_NEWS_BCC",     "kontakt@bludau.io");
+define("CORE_MAIL_FROM_NEWS_BCC",     "info@mydomain.com");
 define("CORE_MAIL_FROM_NEWS_BCC_NAME",     "myDraft News Support");
 
 #### SOCIAL MEDIA
