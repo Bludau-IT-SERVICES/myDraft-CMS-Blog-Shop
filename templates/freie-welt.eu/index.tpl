@@ -65,12 +65,10 @@
 		<div style="clear:both"></div>
 		{include file="footer.tpl" page_id="$page_id"} 
 	</div>
- 
+	 
 	<script async src="/templates{$template_folder}/js/jquery_user_main.js"></script>
 	<script async src="/framework/fckeditor/fckeditor.js"></script>
-	<link media="all" href="/templates{$template_folder}/css/template_master.css" type="text/css" rel="stylesheet">
-	<link rel="stylesheet" href="/framework/raty-2.7.0/lib/jquery.raty.css">		    
-	
+	<link media="all" href="/templates{$template_folder}/css/template_master.css" type="text/css" rel="stylesheet">		
 	{if $admCheck == "1"} 
 		<script async src="/framework/jquery-ui/jquery-ui.min.js"></script>
 		<link rel="stylesheet" type="text/css" src="/framework/jquery-ui/jquery-ui.min.css"/>
@@ -82,8 +80,6 @@
 		<script async src="/framework/ajax_upload/assets/js/jquery.ui.widget.js" ></script>
 		<script async src="/framework/ajax_upload/assets/js/jquery.iframe-transport.js" ></script>
 		<script async src="/framework/ajax_upload/assets/js/jquery.fileupload.js" ></script>		
-	{/if}		
-
-<link rel="stylesheet" href="/framework/fontawesome/css/all.css">
+	{/if}
 </body>
 </html>

@@ -65,18 +65,11 @@
 				{include file="footer.tpl" page_id="$page_id"} 
 		</div>
 	</div>
-
 {if $admCheck == "1"}
 	<script src="/js/jquery_admin_main.js"></script>
 	<script src="js/jquery.uploadprogress.0.3.js"></script>
 	<script src="/js/jquery_user_main.js"></script>
 {/if}
-<!-- else {
-	echo '';
-		$query = "UPDATE menue SET visitors=visitors +1 WHERE id='".$_GET['page_id']."'";
-	mysql_query($query);
-}
-?> -->
 <script>
     $(".flexnav").flexNav();
 </script>

@@ -7,6 +7,18 @@
 	<title>{$page_title}</title>
 	{/if}
 	<base href="{$domain_name}">
+	<!-- DNS Verbindung aufbauen -->
+	<link rel="dns-prefetch" href="//use.fontawesome.com">
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+	<link rel="preconnect" href="//use.fontawesome.com">
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+	<link rel="preload" href="/templates/freie-welt.eu/css/template_master.css" as="style">
+
+	<script rel="preload" src="/js/jquery-3.4.0.min.js"></script>
+	<script rel="preload" src="/js/track.js"></script>	
+	
 	<link rel="canonical" href="{$page_url_cononical}"/>
 	<meta charset="utf-8">
 	<link rel="manifest" href="manifest.json">
@@ -154,17 +166,6 @@
 	{if $google_webmaster != ''}
 		{$google_webmaster}
 	{/if}
-	<!-- DNS Verbindung aufbauen -->
-	<link rel="dns-prefetch" href="//use.fontawesome.com">
-	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-	<link rel="preconnect" href="//use.fontawesome.com">
-	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<!-- CORE -->	
-	<link rel="preload" href="/templates/freie-welt.eu/css/template_master.css" as="style">
-	<!-- CORE -->
-	<script rel="preload" src="/js/jquery-3.4.0.min.js"></script>
-	<script rel="preload" src="/js/track.js"></script>
 	<script src="http://www.youtube.com/player_api"></script>
 <script>
 // Smartphone Erkennung
