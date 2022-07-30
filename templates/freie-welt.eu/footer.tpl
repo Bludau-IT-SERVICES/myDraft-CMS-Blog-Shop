@@ -1,7 +1,6 @@
 <footer>
 	<div class="footer">
-{if $domain_id == 1}
-						
+{if $domain_id == 1}		
 		<div style="float:left;margin-right:30px">
 			<h2>Kontakt</h2>
 			24/7 <a href="mailto:kontakt@mydomain.com">kontakt@mydomain.com</a><br/>	 
@@ -22,7 +21,6 @@
 	</div>
 {literal}	
 <script>
- 
 	$(document).ready(function() {	 	
 		if (detectmob() == true) {
 			$("#menu").css({
@@ -61,7 +59,6 @@
 			  "top": "150px"
 			});
 		}	
-		
 		if('serviceWorker' in navigator) {
 		  navigator.serviceWorker
 				   .register('/sw.js')
@@ -72,10 +69,7 @@
 	});
 </script>
 {/literal}
-
-<div style="clear:both"></div>
 {/if}
-</div>
 <div class="footer">
 	&copy; <a title="" href="https://cms-mydraft.bludau.io/">2022 myDraft CMS by Bludau IT SERVICES</a> | <a title="Bludau IT SERVICES" href="https://bludau.io/">Bludau IT SERIVCES CMS "myDraft" a PHP Portal Software</a>
 </div>

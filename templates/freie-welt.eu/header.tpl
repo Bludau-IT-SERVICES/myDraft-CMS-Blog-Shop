@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de" prefix="og: http://ogp.me/ns#">
 <head>
 	{if $meta_titel != ''}
@@ -13,12 +13,13 @@
 	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 	<link rel="preconnect" href="//use.fontawesome.com">
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
+	<!-- CORE PRELOADING CSS -->	
 	<link rel="preload" href="/templates/freie-welt.eu/css/template_master.css" as="style">
-
-	<script rel="preload" src="/js/jquery-3.4.0.min.js"></script>
-	<script rel="preload" src="/js/track.js"></script>	
-
+	<link rel="preload" href="/templates{$template_folder}/css/bootstrap/css/bootstrap.min.css" as="style">
+	<!-- CORE PRELOADING SCRIPTS-->
+	<link rel="preload" src="/js/jquery-3.4.0.min.js" as="script">
+	<link rel="preload" src="/js/track.js" as="script">
+	<link rel="preload" src="/templates{$template_folder}/css/bootstrap/js/bootstrap.min.js" as="script">
 	<link rel="canonical" href="{$page_url_cononical}"/>
 	<meta charset="utf-8">
 	<link rel="manifest" href="manifest.json">
@@ -32,8 +33,6 @@
 	<meta name="owner" content="" />
 	<meta name="rating" content="general" /> 
 	<meta name="web_author" content="" />
-	
-	<!-- <meta name="date" content="2010-05-15T08:49:37+02:00"> -->
 	{if $meta_description != ''}
 	<meta name="description" content="{$meta_description}">
 	{/if}	
@@ -55,12 +54,10 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="msapplication-starturl" content="/?pk_campaign=PWA&pk_kwd=startup">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
 	<link rel="icon" type="image/jpeg" sizes="192x192" href="/templates/freie-welt.eu/media/favicon-96x96.png">
 	<link rel="apple-touch-icon" type="image/jpeg" sizes="192x192" href="/templates/freie-welt.eu/media/favicon-96x96.png">
 	<link rel="icon" type="image/jpeg" sizes="512x512" href="/templates/freie-welt.eu/media/favicon-96x96.png">
 	<link rel="apple-touch-icon" type="image/jpeg" sizes="512x512" href="/templates/freie-welt.eu/media/favicon-96x96.png">		
-
 	{if $domain_ary.meta_nofollow != ''}
 		<meta content="{$domain_ary.meta_nofollow}" name="robots"> 
 		{else}
@@ -88,31 +85,24 @@
     {if $domain_ary.webseiten_name != ''} 	 
 	      <meta property="og:site_name" content="{$domain_ary.webseiten_name}" />
 	{/if}
-	
 	<!-- <link rel="alternate" type="application/rss+xml" title="Mein myDraft CMS" href="{$domain_name}/freie-welt-nachrichten/" />
 	<link rel="alternate" id="alternate-androidapp" href="" /> 
 	<link rel="alternate" id="alternate-iosapp" href="ios-app://" /> --> 
-	
 	{if $meta_titel != ''}
 	<meta property="og:title" content="{$meta_titel}" />
 	{else}
 	<meta property="og:title" content="{$aryPage.name_de}" />
 	{/if}
-	
 	{if $meta_description != ''}
 		<meta property="og:description" content="{$meta_description}">
 	{else}
 		<meta property="og:description" content="{$aryPage.titel_de}" />
 	{/if}	
-	
 	<meta property="og:image" content="/templates/freie-welt.eu/media/favicon-96x96.png" />
 	<meta property="og:url" content="{$page_http_uri}" />	
-	
 	<!-- <meta property="og:updated_time" content="2017-12-03T19:16:44+00:00" /> -->
-	
 	{if $domain_ary.og_icon != ''} 	
 	     <meta property="og:image" content="{$domain_ary.og_icon}" /> 
-		 
 		 {if $domain_ary.og_image_type != ''}
 	     <meta property="og:image:type" content="{$domain_ary.og_image_type}" />
 		 {/if}
@@ -122,9 +112,7 @@
 		 {if $domain_ary.og_image_height != ''}
 	     <meta property="og:image:height" content="{$domain_ary.og_image_height}" />
 		 {/if}
-
 	{/if}	
-	
 	{if $domain_ary.twitter_handle_name != ''}
 	      <meta name="twitter:site" content="@{$domain_ary.twitter_handle_name}" />
 	{/if}
@@ -138,13 +126,11 @@
 	{else}
 	<meta name="twitter:title" content="{$aryPage.name_de}" />
 	{/if}
-	
 	{if $meta_description != ''}
 		<meta name="twitter:description" content="{$aryPage.meta_description}" />
 	{else}
 		<meta name="twitter:description" content="{$aryPage.titel_de}" />
 	{/if}	
-
 	{if $domain_ary.twitter_icon != ''}
 		<meta name="twitter:image" content="{$domain_ary.twitter_icon}" />
 	{/if} 
