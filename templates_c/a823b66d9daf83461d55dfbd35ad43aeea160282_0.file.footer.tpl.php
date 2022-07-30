@@ -1,6 +1,29 @@
-<footer>
+<?php
+/* Smarty version 4.1.1, created on 2022-07-30 17:39:38
+  from '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/Design1/footer.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.1.1',
+  'unifunc' => 'content_62e550ba73a2f0_74580129',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a823b66d9daf83461d55dfbd35ad43aeea160282' => 
+    array (
+      0 => '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/Design1/footer.tpl',
+      1 => 1659195268,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_62e550ba73a2f0_74580129 (Smarty_Internal_Template $_smarty_tpl) {
+?><footer>
 	<div class="footer">
-	{if $domain_id == 1}
+	<?php if ($_smarty_tpl->tpl_vars['domain_id']->value == 1) {?>
 		<div style="float:left;margin-right:30px">
 		<h2>Kontakt mit Shopste.com aufnehmen</h2>
 		24/7 <a href="mailto:kontakt@shopste">kontakt@shopste.com</a><br/>
@@ -26,10 +49,12 @@
 				<li><a href="https://twitter.com/Shopste">Bei Twitter</a> | <a href="https://www.facebook.com/pages/Bludau-Media/194094684113578?ref=hl">Bei Facebook</a></li>
 			</ul>
 		</div>
-		<script>	
+		<?php echo '<script'; ?>
+>	
 			$('body').addClass('animated bounceInLeft');
-		</script>	
-{/if}
+		<?php echo '</script'; ?>
+>	
+<?php }?>
 	</div>
 	<div class="footer">&copy; <a title="shopste.com Marktplatz" href="http://shopste.com">2015 shopste.com</a> | <a title="MyDraft Portal Software" href="http://www.php-consulting.com/de/7/MyDraft-CMS/">MyDraft PHP Software</a></div>
 	<div class="box" id="box" style="overflow:auto;">
@@ -40,7 +65,8 @@
 	</p>
 	</div>
 	<div class="overlay" id="overlay" style="display:none;"></div>
-	<script>
+	<?php echo '<script'; ?>
+>
 		$(".flexnav").flexNav({         
 			'animationSpeed' : 'fast',
 			'calcItemWidths': true , // dynamically calcs top level nav item widths
@@ -56,5 +82,7 @@
 			$('.flexnav ').removeClass('fixed');
 		}
 	});
-	</script>
-</footer>
+	<?php echo '</script'; ?>
+>
+</footer><?php }
+}

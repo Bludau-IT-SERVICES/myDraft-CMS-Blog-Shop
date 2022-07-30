@@ -14,11 +14,11 @@
 	<link rel="preconnect" href="//use.fontawesome.com">
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 	<!-- CORE PRELOADING CSS -->	
-	<link rel="preload" href="/templates/freie-welt.eu/css/template_master.css" as="style">
+	<link rel="preload" href="/templates{$template_folder}/css/template_master.css" as="style">
 	<link rel="preload" href="/templates{$template_folder}/css/bootstrap/css/bootstrap.min.css" as="style">
 	<!-- CORE PRELOADING SCRIPTS-->
 	<link rel="preload" src="/js/jquery-3.4.0.min.js" as="script">
-	<link rel="preload" src="/js/track.js" as="script">
+	<link rel="preload" src="/js/track.js" as="script">	
 	<link rel="preload" src="/templates{$template_folder}/css/bootstrap/js/bootstrap.min.js" as="script">
 	<link rel="canonical" href="{$page_url_cononical}"/>
 	<meta charset="utf-8">
@@ -54,10 +54,10 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="msapplication-starturl" content="/?pk_campaign=PWA&pk_kwd=startup">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/jpeg" sizes="192x192" href="/templates/freie-welt.eu/media/favicon-96x96.png">
-	<link rel="apple-touch-icon" type="image/jpeg" sizes="192x192" href="/templates/freie-welt.eu/media/favicon-96x96.png">
-	<link rel="icon" type="image/jpeg" sizes="512x512" href="/templates/freie-welt.eu/media/favicon-96x96.png">
-	<link rel="apple-touch-icon" type="image/jpeg" sizes="512x512" href="/templates/freie-welt.eu/media/favicon-96x96.png">		
+	<link rel="icon" type="image/jpeg" sizes="192x192" href="/templates{$template_folder}/media/favicon-96x96.png">
+	<link rel="apple-touch-icon" type="image/jpeg" sizes="192x192" href="/templates{$template_folder}/media/favicon-96x96.png">
+	<link rel="icon" type="image/jpeg" sizes="512x512" href="/templates{$template_folder}/media/favicon-96x96.png">
+	<link rel="apple-touch-icon" type="image/jpeg" sizes="512x512" href="/templates{$template_folder}/media/favicon-96x96.png">		
 	{if $domain_ary.meta_nofollow != ''}
 		<meta content="{$domain_ary.meta_nofollow}" name="robots"> 
 		{else}
@@ -98,7 +98,7 @@
 	{else}
 		<meta property="og:description" content="{$aryPage.titel_de}" />
 	{/if}	
-	<meta property="og:image" content="/templates/freie-welt.eu/media/favicon-96x96.png" />
+	<meta property="og:image" content="/templates{$template_folder}/media/favicon-96x96.png" />
 	<meta property="og:url" content="{$page_http_uri}" />	
 	<!-- <meta property="og:updated_time" content="2017-12-03T19:16:44+00:00" /> -->
 	{if $domain_ary.og_icon != ''} 	
@@ -175,7 +175,7 @@ function detectmob() {
 <link media="all" href="/templates{$template_folder}/css/template_master.css" type="text/css" rel="stylesheet">
 <link media="all" href="/templates{$template_folder}/css/menu.css" type="text/css" rel="stylesheet">
 <script src="/js/jquery-3.4.0.min.js"></script>
-<script defer src="/templates/freie-welt.eu/js/track.js"></script>
+<script src="/templates{$template_folder}/js/track.js"></script>
 <link rel="stylesheet" href="/templates{$template_folder}/css/bootstrap/css/bootstrap.min.css">
 <script src="/templates{$template_folder}/css/bootstrap/js/bootstrap.min.js"></script>
 <!-- <script>

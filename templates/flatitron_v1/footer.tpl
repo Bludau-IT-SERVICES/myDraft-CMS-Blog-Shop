@@ -1,12 +1,10 @@
 <footer>
 	<div class="footer">
-	{if $domain_id == 1}
-					
+	{if $domain_id == 1}					
 		<div style="float:left;margin-right:30px">
-		<h2>Kontakt mit Bludau Media aufnehmen</h2>
-		24/7 <a href="mailto:kontakt@bludau-media.de">kontakt@bludau-media.de</a><br/>
+		<h2>Kontakt mit aufnehmen</h2>
+		24/7 <a href="mailto:kontakt@bludau-media.de">kontakt@mydomain.com</a><br/>
 		Telefonisch Mo. - Fr. 9 - 17 Uhr unter 0441-2 33 33 05<br/>
-		<a href="https://get.teamviewer.com/bludau-media">Teamviewer Support möglich</a>
 		</div>
 		<div style="float:left;margin-right:30px">
 			<h2>Weitere wichtige Informationen</h2>
@@ -20,40 +18,15 @@
 			</ul>  
 		</div>
 		<div style="float:left">
-			<h2>Bludau Media auf Social Media</h2>
+			<h2>Social Media</h2>
 			<ul>
-				<li><a href="https://twitter.com/Bludau_Media">Bludau-Media auf Twitter</a></li>
+				<li><a href="https://twitter.com/">Twitter</a></li>
 			</ul>
-			<br/><strong>Inhalt mit einem Klick bewerten</strong><div id="raty-benutzer"></div>
 		</div>
- 
-<script>	
-		
-		//$('body').addClass('animated bounceInLeft');
-		
-	$.fn.raty.defaults.path = '../../framework/raty-2.7.0/demo/images';
-	
-	$('#raty-benutzer').raty({ 
-	half: true, hints       : ['magenhalft', 'ausreichend', 'befriediegend', 'gut', 'sehr gut'],
-	score:{$sys_score_page},
-	click: function(score, evt) {
-			setSaveScore({$page_id},score); 
-	} 
-	});	
-	function setSaveScore(text_id,score) {
-	var ajax_load = '';
-	//<img src='image/load.gif' alt='loading...' />
-		$('#acp_message').html(ajax_load).load('/vote_save.php', 'page_id=' + text_id + '&score=' + score); 
-	}
-	</script>
 	<div style="clear:both"></div>
-	
-	{/if}
-	</div>
-	<div class="footer">
-	&copy; <a title="Bludau Media" href="https://bludau-media.de">2016 Bludau-Media.de</a> | <a href="{$domain_name}/feed/">News Feed<img src="/image/rss-small.png"/> | </a><a title="MyDraft PHP Portal Software" href="https://php-consulting.com/de/7/MyDraft-CMS/">MyDraft PHP Portal Software</a> 
-
-	</div>
+{/if}
+</div>
+	<div class="footer">&copy; <a title="Bludau IT Services" href="https://bludau.io">2022 Bludau.io</a> | <a href="{$domain_name}/feed/">News Feed<img src="/image/rss-small.png"/> | </a><a title="MyDraft PHP Portal Software" href="https://php-consulting.com/de/7/MyDraft-CMS/">MyDraft PHP Portal Software</a></div>
 	{literal}
 <script>
 /*
@@ -76,9 +49,7 @@ $(window).bind('scroll', function () {
 
 </script>
 	{/literal}
-				</footer>
-
-
+</footer>
 <script>
 $('.menue').addClass('wow zoomIn');
 $('.texthtml').addClass('wow zoomInDown');
@@ -110,19 +81,3 @@ $('.flexnav').addClass('wow zoomInRight');
 
 </script>
 {/literal}
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//bludau-media.de/framework/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="//bludau-media.de/framework/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
-<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-594f10386266827c"></script> 

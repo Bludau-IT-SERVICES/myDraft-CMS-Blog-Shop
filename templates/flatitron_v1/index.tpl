@@ -4,8 +4,7 @@
 		<div class="page">
 			{if $admCheck == "1"}
 				{include file="adminpanel.tpl" admCheck="$admCheck"} 
-			{/if}
-			 
+			{/if}			 
 			{if $logo_pfad != ""}
 			<div class="header-container">
 				<header>
@@ -24,42 +23,37 @@
 				</header> 
 			</div>
 			{/if}	
-				<nav  role="navigation">
-    
-				 <div class="navbar yamm navbar-default navbar-fixed-top">
-						<div class="container_neo" style="left:9%;position:relative">
-			 
-							<div class="navbar-header">
-									<button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Shopste.com</a>
-							</div>
-							<div id="navbar-collapse-1" class="navbar-collapse collapse">
-								<ul class="nav navbar-nav" data-breakpoint="800" >						
-									{$menue_html = menue_generator(0,0,'',0,0)}
-									{$menue_html}
-								</ul>
-							</div> 
+			<nav  role="navigation">
+				<div class="navbar yamm navbar-default navbar-fixed-top">
+					<div class="container_neo" style="left:9%;position:relative">			 
+						<div class="navbar-header">
+								<button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Shopste.com</a>
 						</div>
-					</div>
-				</nav>
-				
-					<div class="brotkruemmel">
-					{$brotkruemmel_navi = getMenuePath({$page_id})} &nbsp;
-					{$brotkruemmel_navi}<br/>
-						<div id="google_translate_box">
-							{include file="func_google_translate.tpl"}
-						</div>
-					</div>
-
-				<div style="clear:both"></div>
-				<div class="main {$layout_style}">
-					<div  id= "main_page_container" class="main-border">
-					{$layout_content = getPageLayoutHTML_tpl({$aryPage.layout},{$aryPage.spalte_links_breite},{$aryPage.spalte_rechts_breite},{$aryPage.spalte_mitte_breite})}
-					{$layout_content}
-					
+						<div id="navbar-collapse-1" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav" data-breakpoint="800" >						
+								{$menue_html = menue_generator(0,0,'',0,0)}
+								{$menue_html}
+							</ul>
+						</div> 
 					</div>
 				</div>
-				<div style="clear:both"></div>
-				{include file="footer.tpl" page_id="$page_id"} 
+			</nav>				
+			<div class="brotkruemmel">
+				{$brotkruemmel_navi = getMenuePath({$page_id})} &nbsp;
+				{$brotkruemmel_navi}<br/>
+				<div id="google_translate_box">
+					{include file="func_google_translate.tpl"}
+				</div>
+			</div>
+			<div style="clear:both"></div>
+			<div class="main {$layout_style}">
+				<div  id= "main_page_container" class="main-border">
+				{$layout_content = getPageLayoutHTML_tpl({$aryPage.layout},{$aryPage.spalte_links_breite},{$aryPage.spalte_rechts_breite},{$aryPage.spalte_mitte_breite})}
+				{$layout_content}				
+				</div>
+			</div>
+			<div style="clear:both"></div>
+			{include file="footer.tpl" page_id="$page_id"} 
 	</div>
 {if $admCheck == "1"}
 	<script src="/js/jquery_admin_main.js"></script>
@@ -76,8 +70,7 @@
 </script>
 {literal}
 <script>
-      $(function() {
-      
+      $(function() {      
         $(document).on('click', '.yamm .dropdown-menu', function(e) {
 			alert(this);
           e.stopPropagation()
