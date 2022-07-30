@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2022-07-30 05:37:00
+/* Smarty version 4.1.1, created on 2022-07-30 06:03:06
   from '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/freie-welt.eu/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_62e4a75c0a0963_44800406',
+  'unifunc' => 'content_62e4ad7a5ec889_57320873',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1235cb829030c216927df231ebdf6f381753df8b' => 
     array (
       0 => '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/freie-welt.eu/footer.tpl',
-      1 => 1659152159,
+      1 => 1659152428,
       2 => 'file',
     ),
   ),
@@ -20,31 +20,29 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62e4a75c0a0963_44800406 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62e4ad7a5ec889_57320873 (Smarty_Internal_Template $_smarty_tpl) {
 ?><footer>
 	<div class="footer">
 <?php if ($_smarty_tpl->tpl_vars['domain_id']->value == 1) {?>
 						
 		<div style="float:left;margin-right:30px">
 			<h2>Kontakt</h2>
-			24/7 <a href="mailto:kontakt@freie-welt.eu">kontakt@freie-welt.eu</a><br/>	 
+			24/7 <a href="mailto:kontakt@mydomain.com">kontakt@mydomain.com</a><br/>	 
 		</div>
 		<div style="float:left;margin-right:30px">
 			<h2>Weitere Informationen</h2>
 			<ul>
-				<li><a title="FREIE-WELT.EU Impressum" href="https://freie-welt.eu/de/163325/Impressum/">Impressum</a></li>
+				<li><a title="Impressum" href="/de/3/Impressum/">Impressum</a></li>
 			</ul>
 		</div>
 		<div style="float:left">
 			<h2>Social Media</h2>
 			<ul>
-				<li><a title="FREIE-WELT.EU Nachrichtenportal auf Twitter folgen" href="https://twitter.com/FreieWeltEu">Twitter</a></li>
-				<li><a title="FREIE-WELT.EU Nachrichtenportal auf Facebook folgen" href="https://www.facebook.com/FreieWelt.eu/">Facebook</a></li>
+				<li><a title="Twitter" href="https://twitter.com/">Twitter</a></li>
+				<li><a title="Facebook" href="https://www.facebook.com/">Facebook</a></li>
 			</ul>
 		</div>
 	</div>
-	<a title="FREIE-WELT.EU RSS-Feed Nachrichten abnonnieren" href="<?php echo $_smarty_tpl->tpl_vars['domain_name']->value;?>
-/freie-welt-nachrichten/"><img alt="RSS-Feed" src="/image/rss-small.png"/>RSS-Feed Nachrichtenportal Freie Welt</a>
 	
 <?php echo '<script'; ?>
 >
@@ -94,14 +92,6 @@ function content_62e4a75c0a0963_44800406 (Smarty_Internal_Template $_smarty_tpl)
 				   .then(function() { console.log("myDraft CMS Service Worker registriert"); });
 		}
 		
-		//$('body').addClass('animated bounceInLeft');
-
-
-		function setSaveScore(text_id,score) {
-		var ajax_load = '';
-		//<img src='image/load.gif' alt='loading...' />
-			$('#acp_message').html(ajax_load).load('/vote_save.php', 'page_id=' + text_id + '&score=' + score); 
-		}
 		setTrack('<?php echo $_smarty_tpl->tpl_vars['trackid']->value;?>
 ','<?php echo $_smarty_tpl->tpl_vars['page_id']->value;?>
 ','0');

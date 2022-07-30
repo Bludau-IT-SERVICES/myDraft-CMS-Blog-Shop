@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2022-07-07 12:37:38
+/* Smarty version 4.1.1, created on 2022-07-30 06:03:06
   from '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/freie-welt.eu/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_62c6b772ecbf42_07001433',
+  'unifunc' => 'content_62e4ad7a5ddcf9_96455155',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '19f54dacd7a2ece8ec5f62ee1bf33c06149d67ed' => 
     array (
       0 => '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/freie-welt.eu/header.tpl',
-      1 => 1656941469,
+      1 => 1659153577,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62c6b772ecbf42_07001433 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62e4ad7a5ddcf9_96455155 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="de" prefix="og: http://ogp.me/ns#">
 <head>
@@ -33,21 +33,36 @@ function content_62c6b772ecbf42_07001433 (Smarty_Internal_Template $_smarty_tpl)
 	<?php }?>
 	<base href="<?php echo $_smarty_tpl->tpl_vars['domain_name']->value;?>
 ">
+	<!-- DNS Verbindung aufbauen -->
+	<link rel="dns-prefetch" href="//use.fontawesome.com">
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+	<link rel="preconnect" href="//use.fontawesome.com">
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+	<link rel="preload" href="/templates/freie-welt.eu/css/template_master.css" as="style">
+
+	<?php echo '<script'; ?>
+ rel="preload" src="/js/jquery-3.4.0.min.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ rel="preload" src="/js/track.js"><?php echo '</script'; ?>
+>	
+	
 	<link rel="canonical" href="<?php echo $_smarty_tpl->tpl_vars['page_url_cononical']->value;?>
 "/>
 	<meta charset="utf-8">
 	<link rel="manifest" href="manifest.json">
 	<!-- <meta http-equiv="expires" content="0">
 	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Cache-Control" content="no-cache">	 -->
-	
+	<meta http-equiv="Cache-Control" content="no-cache">	 -->	
 	<meta name="subject" content="Nachrichtenportal und Aufklärung" />	
 	<meta name="coverage" content="Worldwide" /> 
 	<meta name="distribution" content="Global" />
 	<meta name="category" content="Nachrichtenportal" />
-	<meta name="owner" content="Bludau IT Services" />
+	<meta name="owner" content="" />
 	<meta name="rating" content="general" /> 
-	<meta name="web_author" content="Jan Bludau" />
+	<meta name="web_author" content="" />
 	
 	<!-- <meta name="date" content="2010-05-15T08:49:37+02:00"> -->
 	<?php if ($_smarty_tpl->tpl_vars['meta_description']->value != '') {?>
@@ -68,8 +83,8 @@ function content_62c6b772ecbf42_07001433 (Smarty_Internal_Template $_smarty_tpl)
 	<?php }?> 
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="application-name" content="Freie Welt.eu">
-	<meta name="apple-mobile-web-app-title" content="Freie Welt.eu">
+	<meta name="application-name" content="myDraft CMS">
+	<meta name="apple-mobile-web-app-title" content="myDraft CMS">
 	<meta name="theme-color" content="#2196f3">
 	<meta name="msapplication-navbutton-color" content="#2196f3">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -137,7 +152,7 @@ function content_62c6b772ecbf42_07001433 (Smarty_Internal_Template $_smarty_tpl)
 " />
 	<?php }?>	
 	
-	<meta property="og:image" content="https://freie-welt.eu/templates/freie-welt.eu/media/favicon-96x96.png" />
+	<meta property="og:image" content="/templates/freie-welt.eu/media/favicon-96x96.png" />
 	<meta property="og:url" content="<?php echo $_smarty_tpl->tpl_vars['page_http_uri']->value;?>
 " />	
 	
@@ -166,12 +181,11 @@ function content_62c6b772ecbf42_07001433 (Smarty_Internal_Template $_smarty_tpl)
 	      <meta name="twitter:site" content="@<?php echo $_smarty_tpl->tpl_vars['domain_ary']->value['twitter_handle_name'];?>
 " />
 	<?php }?>
-	<meta name="twitter:creator" content="@FreieWeltEu">
+	<meta name="twitter:creator" content="@myTwitterHandle">
 	<!-- 
 	<meta name="twitter:card" content="summary_large_image">
 	-->
-	<meta name="twitter:card" content="summary">
-	
+	<meta name="twitter:card" content="summary">	
 	<?php if ($_smarty_tpl->tpl_vars['meta_titel']->value != '') {?>
 	<meta name="twitter:title" content="<?php echo $_smarty_tpl->tpl_vars['meta_titel']->value;?>
 " />
@@ -195,8 +209,7 @@ function content_62c6b772ecbf42_07001433 (Smarty_Internal_Template $_smarty_tpl)
 	<?php if ($_smarty_tpl->tpl_vars['domain_ary']->value['twitter_icon_alt'] != '') {?>
 		<meta name="twitter:image:alt" content="<?php echo $_smarty_tpl->tpl_vars['domain_ary']->value['twitter_icon_alt'];?>
 " />
-	<?php }?>
-	
+	<?php }?>	
 	<meta name="audience" content="alle">
 	<link rel="alternate" hreflang="de" href="<?php echo $_smarty_tpl->tpl_vars['page_http_uri']->value;?>
 " />
@@ -204,7 +217,6 @@ function content_62c6b772ecbf42_07001433 (Smarty_Internal_Template $_smarty_tpl)
 /marktplatz-nachrichten/" />
 	<link rel="alternate" type="application/rss+xml" title="Shopste Produkt News" href="https://<?php echo $_smarty_tpl->tpl_vars['domain_name']->value;?>
 /shop-produkte/" /> -->
-
 	<?php if ($_smarty_tpl->tpl_vars['domain_ary']->value['webseite_icon'] != '') {?> 
 	    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $_smarty_tpl->tpl_vars['domain_ary']->value['webseite_icon'];?>
 ">
@@ -221,31 +233,6 @@ function content_62c6b772ecbf42_07001433 (Smarty_Internal_Template $_smarty_tpl)
 		<?php echo $_smarty_tpl->tpl_vars['google_webmaster']->value;?>
 
 	<?php }?>
-	
-	
-	<!-- DNS Verbindung aufbauen -->
-	<link rel="dns-prefetch" href="//use.fontawesome.com">
-	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-	<link rel="preconnect" href="//use.fontawesome.com">
-	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-	<link rel="preconnect" href="https://adservice.google.de">
-	<link rel="preconnect" href="https://translate.googleapis.com">
-	<link rel="preconnect" href="https://tpc.googlesyndication.com">
-<!-- CORE -->	
-	<link rel="preload" href="/templates/freie-welt.eu/css/template_master.css" as="style">
-	<!-- CORE -->
-	<link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@700&family=Trade+Winds&display=swap" rel="stylesheet">
-	<?php echo '<script'; ?>
- rel="preload" src="/js/jquery-3.4.0.min.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- rel="preload" src="/js/track.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- rel="preload" src="/framework/raty-2.7.0/lib/jquery.raty.js"><?php echo '</script'; ?>
->
 	<?php echo '<script'; ?>
  src="http://www.youtube.com/player_api"><?php echo '</script'; ?>
 >
@@ -273,26 +260,11 @@ function detectmob() {
 /css/template_master.css" type="text/css" rel="stylesheet">
 <link media="all" href="/templates<?php echo $_smarty_tpl->tpl_vars['template_folder']->value;?>
 /css/menu.css" type="text/css" rel="stylesheet">
-<!-- Google Tag Manager -->
-
-<?php echo '<script'; ?>
->(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-58RSLG7');<?php echo '</script'; ?>
->
-
-<!-- End Google Tag Manager -->	
 <?php echo '<script'; ?>
  src="/js/jquery-3.4.0.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="/framework/raty-2.7.0/lib/jquery.raty.js"><?php echo '</script'; ?>
->
-<!-- Latest compiled JavaScript -->
-<?php echo '<script'; ?>
- src="/templates/freie-welt.eu/js/track.js"><?php echo '</script'; ?>
+ defer src="/templates/freie-welt.eu/js/track.js"><?php echo '</script'; ?>
 >
 <link rel="stylesheet" href="/templates<?php echo $_smarty_tpl->tpl_vars['template_folder']->value;?>
 /css/bootstrap/css/bootstrap.min.css">
@@ -300,9 +272,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  src="/templates<?php echo $_smarty_tpl->tpl_vars['template_folder']->value;?>
 /css/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
 >
-<?php echo '<script'; ?>
+<!-- <?php echo '<script'; ?>
 >
-	$.fn.raty.defaults.path = '../../framework/raty-2.7.0/demo/images';
 	var player;
 	window.onYouTubePlayerAPIReadyByID = function(id) {
 			player = new YT.Player('ytplayer_' + id, {
@@ -312,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			});
 	}
 <?php echo '</script'; ?>
->
+> -->
 </head>
 <?php }
 }

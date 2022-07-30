@@ -18,7 +18,7 @@
 
 	<script rel="preload" src="/js/jquery-3.4.0.min.js"></script>
 	<script rel="preload" src="/js/track.js"></script>	
-	
+
 	<link rel="canonical" href="{$page_url_cononical}"/>
 	<meta charset="utf-8">
 	<link rel="manifest" href="manifest.json">
@@ -89,9 +89,10 @@
 	      <meta property="og:site_name" content="{$domain_ary.webseiten_name}" />
 	{/if}
 	
-	<link rel="alternate" type="application/rss+xml" title="Freie Welt Nachrichtenportal" href="{$domain_name}/freie-welt-nachrichten/" />
-	<!-- <link rel="alternate" id="alternate-androidapp" href="" /> 
+	<!-- <link rel="alternate" type="application/rss+xml" title="Mein myDraft CMS" href="{$domain_name}/freie-welt-nachrichten/" />
+	<link rel="alternate" id="alternate-androidapp" href="" /> 
 	<link rel="alternate" id="alternate-iosapp" href="ios-app://" /> --> 
+	
 	{if $meta_titel != ''}
 	<meta property="og:title" content="{$meta_titel}" />
 	{else}
