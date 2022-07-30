@@ -55,9 +55,22 @@ Without secret KEY and secret IV no Login and encryption of user data will work.
 "/install/myDraft Datenbank Schema.sql" there is the defaul structure of the SQL default strukture.
 SQL is compatible and tested with mariaDB 10.6.x. You could import the SQL file with mysqldump for example with HeidiSQL.
 
+# Default Template is called "freie-welt"
+Default, recommended folder structure
++ css
++ error_pages
++ fonts
++ img
++ js
++ media
++ module
+
+In the SQL table "domains" you can change the default Template of any domain there are over 50 Options to Setup.
+
 # The default myDraft module structure / plugin system
 There is a Folder called "module" inside of this Folder are all Modules that could be put in the Frontend.
 Every folder inside of "modules" represent a Plugin with a fixed structure with own Frontend Editing Options. 
+Setting "template_folder" where the foldername is stored "freie-welt".
 
 Example myDraft plugin file and directory structure
 -------------------------------------------
