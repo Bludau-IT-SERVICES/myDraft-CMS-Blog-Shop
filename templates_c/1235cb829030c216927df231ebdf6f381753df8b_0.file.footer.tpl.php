@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2022-07-30 06:03:06
+/* Smarty version 4.1.1, created on 2022-07-30 08:07:45
   from '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/freie-welt.eu/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_62e4ad7a5ec889_57320873',
+  'unifunc' => 'content_62e4cab16bef80_96452609',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1235cb829030c216927df231ebdf6f381753df8b' => 
     array (
       0 => '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/freie-welt.eu/footer.tpl',
-      1 => 1659152428,
+      1 => 1659160127,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62e4ad7a5ec889_57320873 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62e4cab16bef80_96452609 (Smarty_Internal_Template $_smarty_tpl) {
 ?><footer>
 	<div class="footer">
-<?php if ($_smarty_tpl->tpl_vars['domain_id']->value == 1) {?>
-						
+<?php if ($_smarty_tpl->tpl_vars['domain_id']->value == 1) {?>		
 		<div style="float:left;margin-right:30px">
 			<h2>Kontakt</h2>
 			24/7 <a href="mailto:kontakt@mydomain.com">kontakt@mydomain.com</a><br/>	 
@@ -46,7 +45,6 @@ function content_62e4ad7a5ec889_57320873 (Smarty_Internal_Template $_smarty_tpl)
 	
 <?php echo '<script'; ?>
 >
- 
 	$(document).ready(function() {	 	
 		if (detectmob() == true) {
 			$("#menu").css({
@@ -85,7 +83,6 @@ function content_62e4ad7a5ec889_57320873 (Smarty_Internal_Template $_smarty_tpl)
 			  "top": "150px"
 			});
 		}	
-		
 		if('serviceWorker' in navigator) {
 		  navigator.serviceWorker
 				   .register('/sw.js')
@@ -99,10 +96,7 @@ function content_62e4ad7a5ec889_57320873 (Smarty_Internal_Template $_smarty_tpl)
 <?php echo '</script'; ?>
 >
 
-
-<div style="clear:both"></div>
 <?php }?>
-</div>
 <div class="footer">
 	&copy; <a title="" href="https://cms-mydraft.bludau.io/">2022 myDraft CMS by Bludau IT SERVICES</a> | <a title="Bludau IT SERVICES" href="https://bludau.io/">Bludau IT SERIVCES CMS "myDraft" a PHP Portal Software</a>
 </div>
