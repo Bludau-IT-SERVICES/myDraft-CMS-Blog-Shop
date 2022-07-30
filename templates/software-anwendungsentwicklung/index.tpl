@@ -5,13 +5,11 @@
 		<div class="page">
 			{if $admCheck == "1"}
 				{include file="adminpanel.tpl" admCheck="$admCheck"} 
-			{/if}
-			 
+			{/if}			 
 			{if $logo_pfad != ""}
 			<div class="header-container">
 				<header>
-					<div class="header">
-					
+					<div class="header">					
 						{if $domain_ary.logo_width != ""}
 							{assign var="logo_width_value" value=$domain_ary.logo_width}
 							{assign var="logo_width" value="width=\"$logo_width_value\""}
@@ -25,35 +23,35 @@
 				</header>
 			</div>
 			{/if}	
-				<div class="menu-button">Menu</div>
-				<div id="mydraft_menue" style="height:69px">
-					<div id="nav_main">
-			
-						<nav>
-						
+			<div class="menu-button">Menu</div>
+			<div id="mydraft_menue" style="height:69px">
+				<div id="nav_main">		
+					<nav>						
 						<ul class="flexnav" data-breakpoint="800" >						
 							{$menue_html = menue_generator(0,0,'',0,0)}
 							{$menue_html}
-						</ul>
-						 
-						</nav>
-					</div>
-				 
+						</ul>						 
+					</nav>
+				</div>				
+			</div>
+
+			<div class="brotkruemmel">
+			{$brotkruemmel_navi = getMenuePath({$page_id})} &nbsp;
+			{$brotkruemmel_navi}<br/>
+			</div>
+
+			<div style="clear:both"></div>
+			
+			<div class="main {$layout_style}">
+				<div  id= "main_page_container" class="main-border">
+				{$layout_content = getPageLayoutHTML_tpl({$aryPage.layout},{$aryPage.spalte_links_breite},{$aryPage.spalte_rechts_breite},{$aryPage.spalte_mitte_breite})}
+				{$layout_content}
+				
 				</div>
-				<div class="brotkruemmel">
-				{$brotkruemmel_navi = getMenuePath({$page_id})} &nbsp;
-				{$brotkruemmel_navi}<br/>
-				</div>
-				<div style="clear:both"></div>
-				<div class="main {$layout_style}">
-					<div  id= "main_page_container" class="main-border">
-					{$layout_content = getPageLayoutHTML_tpl({$aryPage.layout},{$aryPage.spalte_links_breite},{$aryPage.spalte_rechts_breite},{$aryPage.spalte_mitte_breite})}
-					{$layout_content}
-					
-					</div>
-				</div>
-				<div style="clear:both"></div>
-				{include file="footer.tpl" page_id="$page_id"} 
+			</div>
+			
+			<div style="clear:both"></div>
+			{include file="footer.tpl" page_id="$page_id"} 
 	</div>
 {if $admCheck == "1"}
 	<script src="/js/jquery_admin_main.js"></script>

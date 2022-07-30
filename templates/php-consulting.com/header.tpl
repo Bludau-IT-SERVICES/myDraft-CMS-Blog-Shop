@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
-<HEAD>
+<head>
 	<title>{$page_title}</title>
-		<base href="http://{$domain_name}">
+		<base href="https://{$domain_name}">
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<meta content="INDEX,FOLLOW" name="robots">
 		<meta http-equiv="language" content="deutsch, de">
@@ -11,10 +11,10 @@
 		<meta name="page-topic" content="{$meta_page_topic}">
 		<meta name="revisit-after" content="{$meta_revisit_after}">
 		<meta name="audience" content="alle">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="alternate" hreflang="de" href="{$page_http_uri}" />
-		<link rel="alternate" type="application/rss+xml" title="Shopste Marktplatz News" href="http://{$domain_name}/marktplatz-nachrichten/" />
-		<link rel="alternate" type="application/rss+xml" title="Shopste Produkt News" href="http://{$domain_name}/shop-produkte/" />
+		<link rel="alternate" type="application/rss+xml" title="Shopste Marktplatz News" href="https://{$domain_name}/marktplatz-nachrichten/" />
+		<link rel="alternate" type="application/rss+xml" title="Shopste Produkt News" href="https://{$domain_name}/shop-produkte/" />
 		<link href='http://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" sizes="32x32" href="/templates/shopste.com/media/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="96x96" href="/templates/shopste.com/media/favicon-96x96.png">
@@ -46,45 +46,24 @@
 	<!-- <script src="/js/cloud-zoom/cloud-zoom.js"></script> 
 	<script async src="/js/jquery_user_main.js"></script>
 	-->
-	<script src="/js/jquery_user_main.js"></script>
-	
-		<script src="/framework/ajax_upload/assets/js/jquery.knob.js"></script>
+	<script defer src="/js/jquery_user_main.js"></script>
 
-		<!-- jQuery File Upload Dependencies -->
-		<script src="/framework/ajax_upload/assets/js/jquery.ui.widget.js"></script>
-		<script src="/framework/ajax_upload/assets/js/jquery.iframe-transport.js"></script>
-		<script src="/framework/ajax_upload/assets/js/jquery.fileupload.js"></script>
-		
-
-		
-	
+	<script src="/framework/ajax_upload/assets/js/jquery.knob.js"></script>
+	<!-- jQuery File Upload Dependencies -->
+	<script src="/framework/ajax_upload/assets/js/jquery.ui.widget.js"></script>
+	<script src="/framework/ajax_upload/assets/js/jquery.iframe-transport.js"></script>
+	<script src="/framework/ajax_upload/assets/js/jquery.fileupload.js"></script>
 	<link href="/framework/flexnav-master/css/flexnav.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" media="screen" type="text/css" href="/framework/zoomimage/css/zoomimage.css" />
 	<link rel="stylesheet" href="/framework/raty-2.7.0/lib/jquery.raty.css">	
-	<link media="all" href="/templates{$template_folder}/css/template_master.css" type="text/css" rel="stylesheet">
- <!-- ANFANG der Voraussetzungen  
-  <script type="text/javascript">
-    (function () {
-      var po = document.createElement('script');
-      po.type = 'text/javascript';
-      po.async = true;
-      po.src = 'https://plus.google.com/js/client:plusone.js?onload=start';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(po, s);
-    })();
-
-	
-  </script>
-  ENDE der Voraussetzungen -->
-  			 
+	<link media="all" href="/templates{$template_folder}/css/template_master.css" type="text/css" rel="stylesheet"> 			 
 	<script async type="text/javascript" src="/framework/fckeditor/fckeditor.js"></script>
 	<script type="text/javascript" src="/framework/fckeditor/fckeditor.php"></script>
-		{if $admCheck == "1"}
-			<script async type="text/javascript" src="/framework/fckeditor/fckeditor.js"></script>
-			<script type="text/javascript" src="/framework/fckeditor/fckeditor.php"></script>
-			<!-- <script type="text/javascript" src="/framework/jquery-ui/jquery-ui.min.js"></script> -->
-			<link rel="stylesheet" type="text/css" src="/framework/jquery-ui/css/jquery-ui-1.10.4.custom.min.css"/>
-			
-		{/if}
-
-</HEAD>
+	{if $admCheck == "1"}
+		<script async type="text/javascript" src="/framework/fckeditor/fckeditor.js"></script>
+		<script type="text/javascript" src="/framework/fckeditor/fckeditor.php"></script>
+		<!-- <script type="text/javascript" src="/framework/jquery-ui/jquery-ui.min.js"></script> -->
+		<link rel="stylesheet" type="text/css" src="/framework/jquery-ui/css/jquery-ui-1.10.4.custom.min.css"/>
+		
+	{/if}
+</head>

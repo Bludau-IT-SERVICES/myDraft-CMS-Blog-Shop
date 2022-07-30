@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
-<HEAD>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
 	<title>{$page_title}</title>
 		<!-- <base href="{$CORE_HTTPS_METHOD}://{$domain_ary.name}"> -->
 		<base href="{$domain_name}">
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-		
 		{if $domain_ary.meta_nofollow != ''}
 			<meta content="{$domain_ary.meta_nofollow}" name="robots">
 			{else}
 			<meta content="INDEX,FOLLOW" name="robots">
 		{/if}
-		
 		<meta name="author" content="{$domain_ary.meta_autor}">
 		<meta name="copyright" content=" (c) {$domain_ary.meta_autor}"> 
 		<meta name="page-topic" content="{$domain_ary.meta_page_topic}">
 		<meta name="revisit-after" content="{$domain_ary.meta_revisit_after}">
 		<meta name="audience" content="alle">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="alternate" hreflang="de" href="{$page_http_uri}" />
 		<!-- <link rel="alternate" type="application/rss+xml" title="Shopste Marktplatz News" href="{$domain_name}/marktplatz-nachrichten/" />
 		<link rel="alternate" type="application/rss+xml" title="Shopste Produkt News" href="{$domain_name}/shop-produkte/" /> -->
@@ -36,7 +34,6 @@
 		{if $google_webmaster != ''}
 			{$google_webmaster}
 		{/if}
-
 		<!-- <script  src="/framework/jquery/jquery-1.11.2.min.js"></script> -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -47,7 +44,6 @@
 		<script  src="/framework/raty-2.7.0/lib/jquery.raty.js"></script>
     <script type="text/javascript">
       //$.noConflict();
-	  
     </script>			
 	<!-- <script  async type="text/javascript" src="/framework/zoomimage/js/eye.js"></script>
 	<script  async type="text/javascript" src="/framework/zoomimage/js/utils.js"></script>
@@ -58,39 +54,20 @@
 	<!-- <script src="/js/cloud-zoom/cloud-zoom.js"></script> 
 	<script async src="/js/jquery_user_main.js"></script>
 	-->
-	<script src="/js/jquery_user_main.js"></script>
-	
-		<scriptsrc="/framework/ajax_upload/assets/js/jquery.knob.js"></script>
-
-		<!-- jQuery File Upload Dependencies -->
-		<script  src="/framework/ajax_upload/assets/js/jquery.ui.widget.js"></script>
-		<script  src="/framework/ajax_upload/assets/js/jquery.iframe-transport.js"></script>
-		<script  src="/framework/ajax_upload/assets/js/jquery.fileupload.js"></script>
-		
+	<script src="/js/jquery_user_main.js"></script>	
+	<script src="/framework/ajax_upload/assets/js/jquery.knob.js"></script>
+	<!-- jQuery File Upload Dependencies -->
+	<script  src="/framework/ajax_upload/assets/js/jquery.ui.widget.js"></script>
+	<script  src="/framework/ajax_upload/assets/js/jquery.iframe-transport.js"></script>
+	<script  src="/framework/ajax_upload/assets/js/jquery.fileupload.js"></script>
 	<script src="/templates/myd-bludau-media/js/track.js"></script>
-		
 	<script type="text/javascript" src="/framework/jquery_lazyload/jquery.lazyload.min.js"></script> 
- <!-- ANFANG der Voraussetzungen  -->
- {if $page_id == 1}
-  <script type="text/javascript">
-    (function () {
-      var po = document.createElement('script');
-      po.type = 'text/javascript';
-      po.async = true;
-      po.src = 'https://plus.google.com/js/client:plusone.js?onload=start';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(po, s);
-    })();
+	{if $admCheck == "1"}
+			<!-- <script type="text/javascript" src="/framework/jquery-ui/jquery-ui.min.js"></script> -->
+		<link rel="stylesheet" type="text/css" src="/framework/jquery-ui/css/jquery-ui-1.10.4.custom.min.css"/>
+		
+	{/if}
 
-	 
-  </script>
-  {/if}
- <!-- ENDE der Voraussetzungen -->
-  		{if $admCheck == "1"}
-			 <!-- <script type="text/javascript" src="/framework/jquery-ui/jquery-ui.min.js"></script> -->
-			<link rel="stylesheet" type="text/css" src="/framework/jquery-ui/css/jquery-ui-1.10.4.custom.min.css"/>
-			
-		{/if}
 	{if $domain_ary.bWebShopAnimation == 'shop_animation_on'}
 		  <script src="/templates{$template_folder}/js/wow/wow.js"></script>
   <script>
@@ -103,4 +80,4 @@
 
   </script> 
   {/if}
-</HEAD>
+</head>

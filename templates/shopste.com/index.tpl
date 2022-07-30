@@ -27,18 +27,14 @@
 			{/if}	
 				<div class="menu-button">Menu</div>
 				<div id="mydraft_menue" style="height:69px">
-					<div id="nav_main">
-			
-						<nav>
-						
-						<ul class="flexnav" data-breakpoint="800" >						
-							{$menue_html = menue_generator(0,0,'',0,0)}
-							{$menue_html}
-						</ul>
-						 
+					<div id="nav_main">			
+						<nav>						
+							<ul class="flexnav" data-breakpoint="800" >						
+								{$menue_html = menue_generator(0,0,'',0,0)}
+								{$menue_html}
+							</ul>						 
 						</nav>
-					</div>
-				 
+					</div>				 
 				</div>
 				<div class="brotkruemmel">
 				{$brotkruemmel_navi = getMenuePath({$page_id})} &nbsp;
@@ -48,8 +44,7 @@
 				<div class="main {$layout_style}">
 					<div  id= "main_page_container" class="main-border">
 					{$layout_content = getPageLayoutHTML_tpl({$aryPage.layout},{$aryPage.spalte_links_breite},{$aryPage.spalte_rechts_breite},{$aryPage.spalte_mitte_breite})}
-					{$layout_content}
-					
+					{$layout_content}					
 					</div>
 				</div>
 				<div style="clear:both"></div>

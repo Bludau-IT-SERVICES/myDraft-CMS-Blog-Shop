@@ -6,8 +6,8 @@ Versionsnummer: 0.2
 CMS-Bezeichner bei Modulauswahl: 
 CORE: Ja
 Author: Jan Bludau
-Firma: Bludau Media
-Webseite: https://bludau-media.de
+Firma: Bludau IT Services
+Webseite: https://bludau.io
 
 --------------
 >> Changelog:
@@ -16,3 +16,6 @@ Webseite: https://bludau-media.de
 - init of changelog
 - FULL-URL to path only
 - PHP-CORE-Konstanzen Nutzung für Modul-Settings (System-Modul, vorinstalliert) vereinfacht die Einbindung von mehreren Webseitenarten und ist besser Customizable.
+
+30.07.2022:
++ FIX: avoid null-type error 

@@ -1,12 +1,13 @@
 <?php  
 function getTitleParrent($parrentID) {
 	if($parrentID !='') {
-	$query = "SELECT * FROM menue WHERE id=".$parrentID;
+		$query = "SELECT * FROM menue WHERE id=".$parrentID;
 
-	$result = DBi::$conn->query($query) or die(mysqli_error(DBi::$conn));
-	$strName  = mysqli_fetch_assoc($result);
-	return $strName['name_de'];
-	}
+		$result = DBi::$conn->query($query) or die(mysqli_error(DBi::$conn));
+		$strName  = mysqli_fetch_assoc($result);
+		if (!empty($strName['name_de']))  { return $strName['name_de']; } 
+		return "";
+	}	
 	return "";
 } 
 
