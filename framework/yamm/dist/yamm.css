@@ -1,25 +1,29 @@
 /*!
- * Yamm!3 - Yet another megamenu for Bootstrap 3
- * http://geedmo.github.com/yamm3
+ * Yamm! - Yet another megamenu for Bootstrap
+ * http://geedmo.github.com/yamm
  *
  * @geedmo - Licensed under the MIT license
  */
-.yamm .nav,
 .yamm .collapse,
 .yamm .dropup,
 .yamm .dropdown {
   position: static;
 }
+
 .yamm .container {
   position: relative;
 }
+
 .yamm .dropdown-menu {
   left: auto;
 }
+
 .yamm .yamm-content {
-  padding: 20px 30px;
+  padding: 1rem;
 }
-.yamm .dropdown.yamm-fw .dropdown-menu {
+
+.yamm .dropdown.yamm-fw .dropdown-menu,
+.yamm .dropup.yamm-fw .dropdown-menu {
   left: 0;
   right: 0;
 }

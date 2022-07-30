@@ -1,106 +1,66 @@
 # Yamm
 
+![Version](https://img.shields.io/badge/version-4.0.0-blue.svg?cacheSeconds=2592000)
+[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/geedmo/yamm#readme)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/geedmo/yamm/graphs/commit-activity)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/geedmo/yamm/blob/master/LICENSE)
 
-This is *Yet another megamenu for [Bootstrap 3](http://getbootstrap.com/)* from Twitter.
+> This is *Yet another megamenu for [Bootstrap 4](http://getbootstrap.com/)*.
 
-Lightweight and pure CSS megamenu that uses the standard navbar markup and the fluid grid system classes from Bootstrap 3. Work for fixed and responsive layout and has the facility to include (almost) any Bootstrap elements.
+Lightweight and pure CSS megamenu that uses the standard navbar markup and the fluid grid system classes from Bootstrap 4. Work for fixed and responsive layout and has the facility to include (almost) any Bootstrap elements.
 
-#### [Demo](http://geedmo.github.io/yamm3)
+### [Demo](http://geedmo.github.io/yamm/)
 
-Here you can find [Yamm for Bootstrap 4](https://github.com/geedmo/yamm)
+## Install
 
-### Install with npm
+- Install with [npm](https://www.npmjs.com/): `npm install @geedmo/yamm --save`
+- Install with [yarn](https://yarnpkg.com/): `yarn add @geedmo/yamm`
 
-    npm install @geedmo/yamm3 --save
+## Basic usage
 
-### Install with bower
+- CDN `https://cdn.jsdelivr.net/gh/geedmo/yamm@4.0.0/dist/yamm.min.css`
+- ES6 import:  `import "@geedmo/yamm";`
+- SCSS import: `@import "@geedmo/yamm/src/yamm.scss";`
+- LESS import: `@import "@geedmo/yamm/src/yamm.less";`
+- STYL import: `@import "@geedmo/yamm/src/yamm"`
 
-    bower install yamm3 --save
+## Documentation
 
-### Install via composer
+Being a pretty small repository there's no separate documentation. You can find more usage instructions and examples by checking the [Demo](http://geedmo.github.io/yamm) and the source code.
 
-    {
-        "require": {
-            "geedmo/yamm3": "dev-master"
-        }
-    }
+## Bugs and feature requests
 
-### Markup
+Please first read the [issue guidelines](https://github.com/geedmo/yamm/blob/master/.github/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/geedmo/yamm/issues/new).
 
-1. Reuse navbar markup and add class `.yamm` at the top.
+## Development
 
-2. Then add your markup into the `.dropdown-menu`
+```
+npm run build
+```
 
-3. Optionally use `.yamm-content` to wrap content with padding.
+By default the SCSS stylesheet is used to generate the CSS build. See package.json for other scripts.
 
-Example
+## Test
 
-    <nav class="navbar yamm navbar-default " role="navigation">
-        ...
-        <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <div class="yamm-content">
-                        <div class="row">
-                            ...
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        ...
-    </nav>
+```
+npm run test
+```
 
+Test that everything compiles fine (including demo) and all sources generate the same output.
+Make sure all tests passes before sending a PR.
 
-### Fullwidth
+## Author
 
-By default every mega-dropdown will take the content size so is possible to use add `.yamm-fw` to `.dropdown` to expand it fullwidth.
-Yamm works better with fullwidth menus.
-
-Example
-
-    <nav class="navbar yamm navbar-default " role="navigation">
-    ...
-         <ul class="nav navbar-nav">
-           <li class="dropdown yamm-fw">
-                 ...
-           </li>
-         </ul>
-    ...
-    </nav>
+* Twitter: [@geedmo](https://twitter.com/geedmo)
+* Github: [@geedmo](https://github.com/geedmo)
 
 
-### Javascript
+## License
 
-If necessary, this code will prevent unexpected menu close when using some components (like accordion, forms, etc)
+Copyright © 2019 [@geedmo](https://github.com/geedmo).
 
-    $(document).on('click', '.yamm .dropdown-menu', function(e) {
-       e.stopPropagation()
-    })
+This project is [MIT](https://github.com/geedmo/yamm/blob/master/LICENSE) licensed.
 
-### AngularJS
-
-Check it at [hjzheng/angular-mega-menu](https://github.com/hjzheng/angular-mega-menu)
-
-### Bugs and feature requests
-
-Please first read the [issue guidelines](https://github.com/geedmo/yamm3/blob/master/.github/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/geedmo/yamm3/issues/new).
-
-### Compile
-
-Run the following commands in the repository folder
-
-- npm install
-- gulp
-
-To compile yamm with demo
-
-- gulp demo
-
-### License
-
-- Licenced under MIT - [details here](LICENSE.txt)
 
 ## Sponsored content
 <p>

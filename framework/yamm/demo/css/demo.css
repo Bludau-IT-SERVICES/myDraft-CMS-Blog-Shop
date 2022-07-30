@@ -1,53 +1,58 @@
 /*!
- * Yamm!3
+ * Yamm!
  * Yet another megamenu for Bootstrap
- * http://geedmo.github.com/yamm3
+ * http://geedmo.github.com/yamm
  *
  * Demo styles
  */
 
 /* layout */
 body {
-  padding-bottom: 40px;
-  color: #666;
+    padding-bottom: 40px;
+    color: #666;
 }
-pre { margin: 0; padding: 10px 20px !important;}
+pre {
+    margin: 0;
+    padding: 10px 20px !important;
+}
 
 footer {
-  margin-top: 200px;
+    margin-top: 200px;
 }
 
-.container, .jumbotron .container { width: auto; max-width: 1170px; }
+/* demo presentation */
+.container,
+.jumbotron .container {
+    width: auto;
+    max-width: 1170px;
+}
 
 .jumbotron {
-  margin: 60px 0;
-  padding-left: 0;
-  padding-right: 0;
+    margin: 55px 0 60px 0;
+    padding-left: 0;
+    padding-right: 0;
 }
-  .jumbotron.intro {
-    margin-top: 0;
-  }
-
-  .jumbotron .navbar {
-    font-size: 14px;
-    line-height: 1.6;
-  }
 
 /* menu styes */
 .list-unstyled,
-.list-unstyled ul { min-width: 120px }
+.list-unstyled ul {
+    min-width: 120px;
+}
 
-@media ( min-width: 767px ) {
-  .panel-group { width: 400px; }
-  .thumbnail { margin: 0; }
+/*  Accordion needs a width to avoid auto resize due to
+    its absolute position within dropdowns. Desktops only. */
+@media (min-width: 992px) {
+    #accordionExample {
+        width: 480px;
+    }
 }
 
 /* Grid demo styles */
 .grid-demo {
-  padding: 10px 30px;
+    padding: 10px 30px;
 }
 
-  .grid-demo [class*="col-"] {
+.grid-demo [class*='col-'] {
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 1em;
@@ -55,5 +60,9 @@ footer {
     line-height: 2;
     background-color: #e5e1ea;
     border: 1px solid #d1d1d1;
-  }
+}
 
+pre.prettyprint {
+    border-color: #d9e0ef !important;
+    border-radius: 4px;
+}

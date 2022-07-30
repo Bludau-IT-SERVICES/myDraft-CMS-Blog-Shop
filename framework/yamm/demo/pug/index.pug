@@ -2,72 +2,61 @@ doctype
 html(lang='en')
   head
     meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='description', content='Yet another megamenu for Bootstrap 3')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='Yet another megamenu for Bootstrap')
     meta(name='author', content='@geedmo')
-    title Yamm!3 Megamenu for Bootstrap3
+    title Yamm! Megamenu for Bootstrap
 
-    // Bootstrap and demo CSS
-    link(href='demo/components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
-    link(href='demo/components/bootstrap/dist/css/bootstrap-theme.min.css', rel='stylesheet')
+    // Bootstrap and demo styles
+    link(href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', rel='stylesheet')
     link(href='demo/css/demo.css', rel='stylesheet')
 
     // Yamm styles
-    link(href='yamm/yamm.css', rel='stylesheet')
-
-    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
-    //if lt IE 9
-      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
-      script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+    link(href='dist/yamm.css', rel='stylesheet')
 
   body
 
     include navbar-fixed.pug
 
-    .jumbotron.intro
+    .jumbotron
 
       .container
 
-        h1.page-header Hello, Yamm 3!
-        p
-          | This is
-          i Yet another megamenu 
-          | for Bootstrap 3 from Twitter. Lightweight and pure CSS megamenu that uses the standard navbar markup and the fluid grid system classes from Bootstrap 3. Work for fixed and responsive layout and has the facility to include (almost) any Bootstrap elements.
-        p This project is currently hosted on Github and is the sequel to Bootstrap2 Yamm 
-          small: sup: a.text-muted(href="http://geedmo.github.com/yamm", title="Yamm for Bootstrap 2", target="_blank")
-            em.glyphicon.glyphicon-new-window
+        h1.display-1 Hello, Yamm 4!
+        p This is #[i Yet another megamenu] for Bootstrap from Twitter.
+        p Lightweight and pure CSS megamenu that uses the standard navbar markup and the fluid grid system classes from Bootstrap 4. Work for fixed and responsive layout and has the facility to include (almost) any Bootstrap elements.
+        p This project is currently hosted on Github and is the sequel to #[a.text-muted(href="https://geedmo.github.com/yamm", title="Yamm for Bootstrap", target="_blank") Yamm]
         br
-        p
-          a.btn.btn-default.btn-lg(href='https://github.com/geedmo/yamm3') View on Github
-          | 
-          a.btn.btn-primary.btn-lg(href='https://github.com/geedmo/yamm3/archive/master.zip') Download
+        a.mr-4.btn.btn-secondary.btn-lg(href='https://github.com/geedmo/yamm') View on Github
+        |
+        a.btn.btn-primary.btn-lg(href='https://github.com/geedmo/yamm/archive/master.zip') Download
 
     .container
       .row
         .col-md-4
           p.lead Markup
-          :markdown-it
-            1. Reuse navbar markup and add class `.yamm` at the top.
-
-            2. Then add your markup into the `.dropdown-menu`
-
-            3. Optionally use `.yamm-content` to wrap content with padding.
+          ol
+              li
+                  p Reuse navbar markup and add class #[code .yamm] at the top.
+              li
+                  p Then add your markup into the #[code .dropdown-menu]
+              li
+                  p Optionally use #[code .yamm-content] to wrap content with padding.
+              li
+                  p #[code .dropdown-item] is ommited to avoid default background and text color styling
 
         .col-md-8
           pre.prettyprint
-            | &lt;nav class="navbar yamm navbar-default " role="navigation"&gt;
+            | &lt;nav class="yamm navbar navbar-expand-lg navbar-light bg-light"&gt;
             | ...
-            |      &lt;ul class="nav navbar-nav"&gt;
-            |        &lt;li class="dropdown"&gt;
-            |          &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Dropdown&lt;/a&gt;
-            |          &lt;ul class="dropdown-menu"&gt;
-            |            &lt;li&gt;
-            |                &lt;div class="yamm-content"&gt;
-            |                   &lt;div class="row"&gt; 
-            |                     ...
-            |            &lt;/li&gt;
-            |          &lt;/ul&gt;
+            |      &lt;ul class="navbar-nav"&gt;
+            |        &lt;li class="nav-item dropdown"&gt;
+            |          &lt;a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"&gt;Dropdown&lt;/a&gt;
+            |          &lt;div class="dropdown-menu"&gt;
+            |            &lt;div class="yamm-content"&gt;
+            |              ...
+            |            &lt;/div&gt;
+            |          &lt;/div&gt;
             |        &lt;/li&gt;
             |      &lt;/ul&gt;
             | ...
@@ -80,19 +69,18 @@ html(lang='en')
     .container
       .row
         .col-md-4
-          p.lead Width
-          :markdown-it
-            By default every mega-dropdown will take the content size so is possible to use add `.yamm-fw` to `.dropdown` to expand it fullwidth
+          p.lead Fullwidth
+          p By default every mega-dropdown will take the content size and is possible to add #[code .yamm-fw] to #[code .dropdown] to expand it fullwidth
 
-            Yamm works better with fullwidth menus.
+          p: strong Yamm works better with fullwidth menus.
 
         .col-md-8
           pre.prettyprint
-            | &lt;nav class="navbar yamm navbar-default " role="navigation"&gt;
+            | &lt;nav class="yamm navbar navbar-expand-lg navbar-light bg-light"&gt;
             | ...
-            |      &lt;ul class="nav navbar-nav"&gt;
-            |        &lt;li class="dropdown yamm-fw"&gt;
-            |              ...
+            |      &lt;ul class="navbar-nav"&gt;
+            |        &lt;li class="nav-item dropdown yamm-fw"&gt;
+            |          ...
             |        &lt;/li&gt;
             |      &lt;/ul&gt;
             | ...
@@ -107,8 +95,7 @@ html(lang='en')
       .row
         .col-md-4
           p.lead JavaScript
-          :markdown-it
-            This code will prevent unexpected menu close when using some components (like accordion, forms, etc)
+          p This code will prevent unexpected menu close when using some components (like accordion, forms, etc)
 
         .col-md-8
           pre.prettyprint
@@ -117,28 +104,26 @@ html(lang='en')
             | })
 
       footer
-          hr
-          .row
-            .col-sm-4
+          .d-flex.border-top.py-4
+            .mr-auto
               p
                 | MIT &copy; Geedmo 2019
-            .col-sm-8
-              .social
-                ul.list-inline.text-right
-                  li
-                    iframe.github-btn(src='http://ghbtns.com/github-btn.html?user=geedmo&repo=yamm3&type=watch&count=true', allowtransparency='true', frameborder='0', scrolling='0', width='100px', height='20px')
-                  li
-                    iframe.github-btn(src='http://ghbtns.com/github-btn.html?user=geedmo&repo=yamm3&type=fork&count=true', allowtransparency='true', frameborder='0', scrolling='0', width='98px', height='20px')
-                  li
+            .ml-auto
+                .d-flex
+                  div
+                    iframe.github-btn(src='https://ghbtns.com/github-btn.html?user=geedmo&repo=yamm&type=watch&count=true', allowtransparency='true', frameborder='0', scrolling='0', width='60px', height='20px')
+                  div
+                    iframe.github-btn(src='https://ghbtns.com/github-btn.html?user=geedmo&repo=yamm&type=fork&count=true', allowtransparency='true', frameborder='0', scrolling='0', width='60px', height='20px')
+                  div
                     a.twitter-share-button(href='https://twitter.com/share', data-lang='en') Tweet
 
 
     // /container
 
     // Bootstrap core JavaScript
-    script(src='demo/components/jquery/dist/jquery.min.js')
-    script(src='demo/components/bootstrap/dist/js/bootstrap.min.js')
-    script(src='https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+    script(src='https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js' async)
 
     script.
       $(function() {

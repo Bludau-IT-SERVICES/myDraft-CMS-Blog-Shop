@@ -1,13 +1,13 @@
 ---
 name: Feature request
-about: Suggest an idea for a new feature in Yamm3.
+about: Suggest an idea for a new feature in Yamm.
 
 ---
 
 Before opening:
 
-- [Search for duplicate or closed issues](https://github.com/geedmo/yamm3/issues)
-- Read the [contributing guidelines](https://github.com/geedmo/yamm3/blob/master/.github/CONTRIBUTING.md)
+- [Search for duplicate or closed issues](https://github.com/geedmo/yamm/issues)
+- Read the [contributing guidelines](https://github.com/geedmo/yamm/blob/master/.github/CONTRIBUTING.md)
 
 Feature requests must include:
 

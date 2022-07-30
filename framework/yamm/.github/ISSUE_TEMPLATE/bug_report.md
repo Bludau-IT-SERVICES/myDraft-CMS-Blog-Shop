@@ -6,9 +6,9 @@ about: Report a bug you may have identified.
 
 Before opening:
 
-- [Search for duplicate or closed issues](https://github.com/geedmo/yamm3/issues)
+- [Search for duplicate or closed issues](https://github.com/geedmo/yamm/issues)
 - [Validate](https://html5.validator.nu/) and [lint](https://github.com/twbs/bootlint#in-the-browser) any HTML to avoid common problems
-- Read the [contributing guidelines](https://github.com/geedmo/yamm3/blob/master/.github/CONTRIBUTING.md)
+- Read the [contributing guidelines](https://github.com/geedmo/yamm/blob/master/.github/CONTRIBUTING.md)
 
 Bug reports must include:
 
