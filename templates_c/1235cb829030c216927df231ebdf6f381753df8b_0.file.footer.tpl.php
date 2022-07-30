@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2022-07-07 12:37:38
+/* Smarty version 4.1.1, created on 2022-07-30 05:37:00
   from '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/freie-welt.eu/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_62c6b772ed95b7_10256149',
+  'unifunc' => 'content_62e4a75c0a0963_44800406',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1235cb829030c216927df231ebdf6f381753df8b' => 
     array (
       0 => '/var/www/vhosts/bludau.io/cms-mydraft.bludau.io/templates/freie-welt.eu/footer.tpl',
-      1 => 1656941469,
+      1 => 1659152159,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62c6b772ed95b7_10256149 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62e4a75c0a0963_44800406 (Smarty_Internal_Template $_smarty_tpl) {
 ?><footer>
 	<div class="footer">
 <?php if ($_smarty_tpl->tpl_vars['domain_id']->value == 1) {?>
@@ -91,22 +91,11 @@ function content_62c6b772ed95b7_10256149 (Smarty_Internal_Template $_smarty_tpl)
 		if('serviceWorker' in navigator) {
 		  navigator.serviceWorker
 				   .register('/sw.js')
-				   .then(function() { console.log("Freie Welt Service Worker registriert"); });
+				   .then(function() { console.log("myDraft CMS Service Worker registriert"); });
 		}
 		
 		//$('body').addClass('animated bounceInLeft');
-		
-		$.fn.raty.defaults.path = '../../framework/raty-2.7.0/demo/images';
-		
-		$('#raty-benutzer').raty({ 
-		half: true, hints       : ['magenhalft', 'ausreichend', 'befriediegend', 'gut', 'sehr gut'],
-		score:<?php echo $_smarty_tpl->tpl_vars['sys_score_page']->value;?>
-,
-		click: function(score, evt) {
-				setSaveScore(<?php echo $_smarty_tpl->tpl_vars['page_id']->value;?>
-,score); 
-		} 
-		});	
+
 
 		function setSaveScore(text_id,score) {
 		var ajax_load = '';
@@ -125,7 +114,7 @@ function content_62c6b772ed95b7_10256149 (Smarty_Internal_Template $_smarty_tpl)
 <?php }?>
 </div>
 <div class="footer">
-	&copy; <a title="FREIE-WELT.EU Nachrichtenportal | Politik | Kultur | Wissenschaft | Videos" href="https://freie-welt.eu">2015-2021 FREIE-WELT.EU Nachrichtenportal</a> | <a title="Bludau Media PHP Portal Software (powered by CMS myDraft)" href="https://bludau-media.de/">Bludau Media CMS "myDraft" a PHP Portal Software</a>
+	&copy; <a title="" href="https://cms-mydraft.bludau.io/">2022 myDraft CMS by Bludau IT SERVICES</a> | <a title="Bludau IT SERVICES" href="https://bludau.io/">Bludau IT SERIVCES CMS "myDraft" a PHP Portal Software</a>
 </div>
 </footer>
 

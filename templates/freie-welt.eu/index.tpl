@@ -1,10 +1,6 @@
-{include file="header.tpl" title="Nachrichtenportal Freie Welt" }
+{include file="header.tpl" title="Mein CMS" }
 <!-- Cachepunkt: {$CACHED_TIMESTAMP} -->
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58RSLG7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 	<div class="wrapper">
 		<div class="page">
 				{if $admCheck == "1"}
@@ -23,13 +19,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								{assign var="logo_height_value" value=$domain_ary.logo_height}
 								{assign var="logo_height" value="height=\"$logo_height_value\""}
 							{/if}			
-							<a title="Nachrichtenportal Freie Welt " href="/">
-								<img alt="Nachrichtenportal Freie Welt Logo" src="{$logo_pfad}" {$logo_width} {$logo_height}/>
-							</a>
-						</div>
-						<div class="header">
-							<a style="color:yellow" class="button" title="tsecurity.de Nachrichtenportal" href="https://tsecurity.de/?pk_campaign=franchise&pk_kwd=franchise-link&pk_source=franchise-link">
-								ZU TEAM-SECURITY (tsecurity.de) wechseln - IT-NACHRICHTENPORTAL alle 15 Minuten neuste Nachrichten aus über 400 Quellen
+							<a title="Mein CMS" href="/">
+								<img alt="Mein CMS" src="{$logo_pfad}" {$logo_width} {$logo_height}/>
 							</a>
 						</div>
 				</header>
@@ -52,8 +43,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								{$menue_html}
 							</ul>
 					  </nav>
-					</div>
- 
 				</section>
 				
 				<div class="brotkruemmel">

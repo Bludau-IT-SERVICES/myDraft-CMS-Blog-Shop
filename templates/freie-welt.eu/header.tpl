@@ -12,15 +12,14 @@
 	<link rel="manifest" href="manifest.json">
 	<!-- <meta http-equiv="expires" content="0">
 	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Cache-Control" content="no-cache">	 -->
-	
+	<meta http-equiv="Cache-Control" content="no-cache">	 -->	
 	<meta name="subject" content="Nachrichtenportal und Aufklärung" />	
 	<meta name="coverage" content="Worldwide" /> 
 	<meta name="distribution" content="Global" />
 	<meta name="category" content="Nachrichtenportal" />
-	<meta name="owner" content="Bludau IT Services" />
+	<meta name="owner" content="" />
 	<meta name="rating" content="general" /> 
-	<meta name="web_author" content="Jan Bludau" />
+	<meta name="web_author" content="" />
 	
 	<!-- <meta name="date" content="2010-05-15T08:49:37+02:00"> -->
 	{if $meta_description != ''}
@@ -37,8 +36,8 @@
 	{/if} 
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="application-name" content="Freie Welt.eu">
-	<meta name="apple-mobile-web-app-title" content="Freie Welt.eu">
+	<meta name="application-name" content="myDraft CMS">
+	<meta name="apple-mobile-web-app-title" content="myDraft CMS">
 	<meta name="theme-color" content="#2196f3">
 	<meta name="msapplication-navbutton-color" content="#2196f3">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -93,7 +92,7 @@
 		<meta property="og:description" content="{$aryPage.titel_de}" />
 	{/if}	
 	
-	<meta property="og:image" content="https://freie-welt.eu/templates/freie-welt.eu/media/favicon-96x96.png" />
+	<meta property="og:image" content="/templates/freie-welt.eu/media/favicon-96x96.png" />
 	<meta property="og:url" content="{$page_http_uri}" />	
 	
 	<!-- <meta property="og:updated_time" content="2017-12-03T19:16:44+00:00" /> -->
@@ -116,12 +115,11 @@
 	{if $domain_ary.twitter_handle_name != ''}
 	      <meta name="twitter:site" content="@{$domain_ary.twitter_handle_name}" />
 	{/if}
-	<meta name="twitter:creator" content="@FreieWeltEu">
+	<meta name="twitter:creator" content="@myTwitterHandle">
 	<!-- 
 	<meta name="twitter:card" content="summary_large_image">
 	-->
-	<meta name="twitter:card" content="summary">
-	
+	<meta name="twitter:card" content="summary">	
 	{if $meta_titel != ''}
 	<meta name="twitter:title" content="{$meta_titel}" />
 	{else}
@@ -139,13 +137,11 @@
 	{/if} 
 	{if $domain_ary.twitter_icon_alt != ''}
 		<meta name="twitter:image:alt" content="{$domain_ary.twitter_icon_alt}" />
-	{/if}
-	
+	{/if}	
 	<meta name="audience" content="alle">
 	<link rel="alternate" hreflang="de" href="{$page_http_uri}" />
 	<!--- <link rel="alternate" type="application/rss+xml" title="Shopste Marktplatz News" href="https://{$domain_name}/marktplatz-nachrichten/" />
 	<link rel="alternate" type="application/rss+xml" title="Shopste Produkt News" href="https://{$domain_name}/shop-produkte/" /> -->
-
 	{if $domain_ary.webseite_icon != ''} 
 	    <link rel="icon" type="image/png" sizes="32x32" href="{$domain_ary.webseite_icon}">
 	{/if}
@@ -158,25 +154,17 @@
 	{if $google_webmaster != ''}
 		{$google_webmaster}
 	{/if}
-	
-	
 	<!-- DNS Verbindung aufbauen -->
 	<link rel="dns-prefetch" href="//use.fontawesome.com">
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 	<link rel="preconnect" href="//use.fontawesome.com">
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-	<link rel="preconnect" href="https://adservice.google.de">
-	<link rel="preconnect" href="https://translate.googleapis.com">
-	<link rel="preconnect" href="https://tpc.googlesyndication.com">
 <!-- CORE -->	
 	<link rel="preload" href="/templates/freie-welt.eu/css/template_master.css" as="style">
 	<!-- CORE -->
-	<link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@700&family=Trade+Winds&display=swap" rel="stylesheet">
 	<script rel="preload" src="/js/jquery-3.4.0.min.js"></script>
 	<script rel="preload" src="/js/track.js"></script>
-	<script rel="preload" src="/framework/raty-2.7.0/lib/jquery.raty.js"></script>
 	<script src="http://www.youtube.com/player_api"></script>
 <script>
 // Smartphone Erkennung
@@ -198,23 +186,11 @@ function detectmob() {
 </script>	
 <link media="all" href="/templates{$template_folder}/css/template_master.css" type="text/css" rel="stylesheet">
 <link media="all" href="/templates{$template_folder}/css/menu.css" type="text/css" rel="stylesheet">
-<!-- Google Tag Manager -->
-{literal}
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-58RSLG7');</script>
-{/literal}
-<!-- End Google Tag Manager -->	
 <script src="/js/jquery-3.4.0.min.js"></script>
-<script src="/framework/raty-2.7.0/lib/jquery.raty.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="/templates/freie-welt.eu/js/track.js"></script>
+<script defer src="/templates/freie-welt.eu/js/track.js"></script>
 <link rel="stylesheet" href="/templates{$template_folder}/css/bootstrap/css/bootstrap.min.css">
 <script src="/templates{$template_folder}/css/bootstrap/js/bootstrap.min.js"></script>
-<script>
-	$.fn.raty.defaults.path = '../../framework/raty-2.7.0/demo/images';
+<!-- <script>
 	var player;
 	window.onYouTubePlayerAPIReadyByID = function(id) {
 			player = new YT.Player('ytplayer_' + id, {
@@ -223,5 +199,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				videoId: id
 			});
 	}
-</script>
+</script> -->
 </head>

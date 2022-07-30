@@ -64,7 +64,7 @@ define("CORE_SERVER_RSS_SOCIAL_MEDIA",'<div class="social-media"><br/><h3>Social
 &nbsp;<a href="https://www.facebook.com/'.social_media_facebook_username.'/" class="btn-social btn-facebook" title="Facebook" target="_blank" rel="noopener"><i class="fab  fa-facebook-square"></i> Eigene Facebook Seite mit ausgewählten Nachrichten.</a>&nbsp;&nbsp;&nbsp;
 <a href="https://twitter.com/'.social_media_twitter_username.'" class="btn-social btn-twitter" title="Twitter" target="_blank" rel="noopener"><i class="fab  fa-twitter-square"></i> Automatische Tweets Nachrichten alle 5 Minuten neu.</a>
 <br><br>
-<a title="Nachrichtenportal" href="'.CORE_SERVER_DOMAIN.'"><i class="fa fa-home" aria-hidden="true"></i> Zur Startseite</a>
+<a title="Nachrichtenportal" href=""><i class="fa fa-home" aria-hidden="true"></i> Zur Startseite</a>
 </div>');
 
 ### RSS 2 Twitter

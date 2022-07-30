@@ -4,23 +4,22 @@
 						
 		<div style="float:left;margin-right:30px">
 			<h2>Kontakt</h2>
-			24/7 <a href="mailto:kontakt@freie-welt.eu">kontakt@freie-welt.eu</a><br/>	 
+			24/7 <a href="mailto:kontakt@mydomain.com">kontakt@mydomain.com</a><br/>	 
 		</div>
 		<div style="float:left;margin-right:30px">
 			<h2>Weitere Informationen</h2>
 			<ul>
-				<li><a title="FREIE-WELT.EU Impressum" href="https://freie-welt.eu/de/163325/Impressum/">Impressum</a></li>
+				<li><a title="Impressum" href="/de/3/Impressum/">Impressum</a></li>
 			</ul>
 		</div>
 		<div style="float:left">
 			<h2>Social Media</h2>
 			<ul>
-				<li><a title="FREIE-WELT.EU Nachrichtenportal auf Twitter folgen" href="https://twitter.com/FreieWeltEu">Twitter</a></li>
-				<li><a title="FREIE-WELT.EU Nachrichtenportal auf Facebook folgen" href="https://www.facebook.com/FreieWelt.eu/">Facebook</a></li>
+				<li><a title="Twitter" href="https://twitter.com/">Twitter</a></li>
+				<li><a title="Facebook" href="https://www.facebook.com/">Facebook</a></li>
 			</ul>
 		</div>
 	</div>
-	<a title="FREIE-WELT.EU RSS-Feed Nachrichten abnonnieren" href="{$domain_name}/freie-welt-nachrichten/"><img alt="RSS-Feed" src="/image/rss-small.png"/>RSS-Feed Nachrichtenportal Freie Welt</a>
 {literal}	
 <script>
  
@@ -66,26 +65,9 @@
 		if('serviceWorker' in navigator) {
 		  navigator.serviceWorker
 				   .register('/sw.js')
-				   .then(function() { console.log("Freie Welt Service Worker registriert"); });
+				   .then(function() { console.log("myDraft CMS Service Worker registriert"); });
 		}
 		
-		//$('body').addClass('animated bounceInLeft');
-		
-		$.fn.raty.defaults.path = '../../framework/raty-2.7.0/demo/images';
-		
-		$('#raty-benutzer').raty({ 
-		half: true, hints       : ['magenhalft', 'ausreichend', 'befriediegend', 'gut', 'sehr gut'],
-		score:{/literal}{$sys_score_page}{literal},
-		click: function(score, evt) {
-				setSaveScore({/literal}{$page_id}{literal},score); 
-		} 
-		});	
-
-		function setSaveScore(text_id,score) {
-		var ajax_load = '';
-		//<img src='image/load.gif' alt='loading...' />
-			$('#acp_message').html(ajax_load).load('/vote_save.php', 'page_id=' + text_id + '&score=' + score); 
-		}
 		setTrack('{/literal}{$trackid}','{$page_id}{literal}','0');
 	});
 </script>
@@ -95,7 +77,7 @@
 {/if}
 </div>
 <div class="footer">
-	&copy; <a title="FREIE-WELT.EU Nachrichtenportal | Politik | Kultur | Wissenschaft | Videos" href="https://freie-welt.eu">2015-2021 FREIE-WELT.EU Nachrichtenportal</a> | <a title="Bludau Media PHP Portal Software (powered by CMS myDraft)" href="https://bludau-media.de/">Bludau Media CMS "myDraft" a PHP Portal Software</a>
+	&copy; <a title="" href="https://cms-mydraft.bludau.io/">2022 myDraft CMS by Bludau IT SERVICES</a> | <a title="Bludau IT SERVICES" href="https://bludau.io/">Bludau IT SERIVCES CMS "myDraft" a PHP Portal Software</a>
 </div>
 </footer>
 {literal}
